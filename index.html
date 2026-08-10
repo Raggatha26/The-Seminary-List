@@ -85,9 +85,9 @@ h1 em{font-style:italic;font-weight:400;color:var(--pine)}
 .card.done{background:var(--brass-soft);border-color:#E8DDB8}
 .card.done .name{text-decoration:line-through;text-decoration-thickness:1px;color:var(--muted)}
 .card.done .slot{opacity:.4}
-.tick{position:absolute;top:14px;right:14px;width:22px;height:22px;border-radius:6px;border:1.5px solid var(--stone-deep);background:#fff;cursor:pointer;padding:0;display:grid;place-items:center;transition:.15s}
+.tick{touch-action:manipulation;-webkit-tap-highlight-color:transparent;position:absolute;top:14px;right:14px;width:22px;height:22px;border-radius:6px;border:1.5px solid var(--stone-deep);background:#fff;cursor:pointer;padding:0;display:grid;place-items:center;transition:.15s}
 .tick:hover{border-color:var(--brass)}
-.tick svg{width:12px;height:12px;stroke:#fff;fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;opacity:0;transition:opacity .15s}
+.tick svg{pointer-events:none;width:12px;height:12px;stroke:#fff;fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;opacity:0;transition:opacity .15s}
 .tick[aria-checked="true"]{background:var(--brass);border-color:var(--brass)}
 .tick[aria-checked="true"] svg{opacity:1}
 .tick:focus-visible{outline:2px solid var(--pine);outline-offset:2px}
@@ -1022,8 +1022,9 @@ var IMAGES = {
 (function(){
 "use strict";
 var KEY="seminary-list-v2", mem=null;
-function load(){try{var v=localStorage.getItem(KEY);if(v)return JSON.parse(v)}catch(e){}return mem||[]}
+function load(){try{var v=localStorage.getItem(KEY);if(v){var p=JSON.parse(v);if(p&&p.length!==undefined)return p}}catch(e){}return mem||[]}
 function save(a){mem=a;try{localStorage.setItem(KEY,JSON.stringify(a))}catch(e){}}
+function toArr(set){var a=[];set.forEach(function(v){a.push(v)});return a}
 
 var checked=new Set(load());
 var cards=[].slice.call(document.querySelectorAll("[data-card]"));
@@ -1041,37 +1042,38 @@ function paint(){
   document.getElementById("capDone").textContent=n+" packed";
   document.getElementById("capLeft").textContent=(total-n)+" to go";
   cards.forEach(function(c){
-    var on=checked.has(c.dataset.group);
+    var on=checked.has(c.getAttribute("data-group"));
     c.classList.toggle("done",on);
     c.querySelector(".tick").setAttribute("aria-checked",on?"true":"false");
   });
   pips.forEach(function(p){
-    p.classList.toggle("on",checked.has(p.dataset.pip));
+    p.classList.toggle("on",checked.has(p.getAttribute("data-pip")));
   });
   secs.forEach(function(s){
     var hit={};
     [].forEach.call(s.querySelectorAll("[data-card]"),function(c){
-      if(checked.has(c.dataset.group))hit[c.dataset.group]=1;
+      var g=c.getAttribute("data-group");if(checked.has(g))hit[g]=1;
     });
     var b=s.querySelector("[data-secdone]");
     if(b)b.textContent=Object.keys(hit).length;
   });
 }
 
-document.addEventListener("click",function(e){
-  var t=e.target.closest?e.target.closest("[data-tick]"):null;
-  if(t){
-    e.preventDefault();
-    var id=t.dataset.tick;
-    if(checked.has(id))checked.delete(id);else checked.add(id);
-    paint();save([].slice.call(checked));
-    return;
-  }
-  var j=e.target.closest?e.target.closest("[data-jump]"):null;
-  if(j){
-    var sec=document.getElementById(j.dataset.jump);
+function toggle(id){
+  if(checked.has(id)){checked.delete(id)}else{checked.add(id)}
+  paint();save(toArr(checked));
+}
+[].forEach.call(document.querySelectorAll("[data-tick]"),function(btn){
+  btn.addEventListener("click",function(e){
+    e.preventDefault();e.stopPropagation();
+    toggle(btn.getAttribute("data-tick"));
+  });
+});
+[].forEach.call(document.querySelectorAll("[data-jump]"),function(a){
+  a.addEventListener("click",function(){
+    var sec=document.getElementById(a.getAttribute("data-jump"));
     if(sec)sec.open=true;
-  }
+  });
 });
 
 document.getElementById("reset").addEventListener("click",function(){
