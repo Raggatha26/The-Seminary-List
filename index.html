@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Seminary List — everything you need for the year</title>
+<meta name="description" content="A shoppable packing list for seminary. 72 tried-and-true picks across 9 categories, with a checklist that keeps your place.">
+<meta property="og:title" content="The Seminary List">
+<meta property="og:description" content="A packing list you can actually shop. 72 picks for the year, in one checklist.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Karla:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+--paper:#FBFAF7;--stone:#EDE9E1;--stone-deep:#D8D1C3;--ink:#22201C;--muted:#6E6960;
+--pine:#3F5D52;--pine-soft:#E7EDEA;--brass:#B08D2B;--brass-soft:#F7F1DE;
+--shadow:0 1px 2px rgba(34,32,28,.04),0 8px 24px -16px rgba(34,32,28,.2);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Karla",system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+
+.bar{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.94);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--stone)}
+.bar-in{display:flex;align-items:center;gap:18px;min-height:64px;flex-wrap:wrap;padding:10px 0}
+.brand{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:19px;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
+.brand span{color:var(--pine)}
+.search{position:relative;flex:1 1 220px;max-width:380px;margin-left:auto}
+.search input{width:100%;height:38px;padding:0 14px 0 36px;border-radius:999px;border:1px solid var(--stone-deep);background:#fff;font:inherit;font-size:14.5px;color:var(--ink)}
+.search input::placeholder{color:#9A948A}
+.search input:focus-visible{outline:2px solid var(--pine);outline-offset:1px;border-color:transparent}
+.search svg{position:absolute;left:13px;top:11px;width:16px;height:16px;stroke:#9A948A;fill:none;stroke-width:1.8}
+.tally{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--muted);white-space:nowrap;display:flex;align-items:center;gap:8px}
+.tally b{color:var(--pine);font-weight:500}
+.btn{border:1px solid var(--stone-deep);background:#fff;border-radius:999px;font:inherit;font-size:12.5px;color:var(--muted);padding:5px 12px;cursor:pointer;white-space:nowrap}
+.btn:hover{border-color:var(--pine);color:var(--pine)}
+.btn:focus-visible{outline:2px solid var(--pine);outline-offset:2px}
+.js-only{display:none}
+
+.hero{padding:72px 0 44px;border-bottom:1px solid var(--stone)}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 22px}
+h1{font-family:"Fraunces",Georgia,serif;font-weight:300;font-size:clamp(38px,6.2vw,66px);line-height:1.04;letter-spacing:-.035em;margin:0 0 20px;max-width:14ch}
+h1 em{font-style:italic;font-weight:400;color:var(--pine)}
+.lede{font-size:17.5px;color:var(--muted);max-width:46ch;margin:0 0 40px}
+.meter-grid{display:flex;flex-wrap:wrap;gap:5px;max-width:660px}
+.pip{width:13px;height:13px;border-radius:3px;background:var(--stone-deep);transition:background .35s ease,transform .35s cubic-bezier(.2,.9,.3,1.4)}
+.pip.on{background:var(--brass);transform:scale(1.14)}
+.meter-cap{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--muted);margin:16px 0 0}
+.meter-cap b{color:var(--ink);font-weight:500}
+
+.cats{padding:32px 0 4px}
+.cats-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.chip{display:inline-flex;align-items:baseline;gap:8px;text-decoration:none;border:1px solid var(--stone-deep);border-radius:999px;padding:8px 15px;font-size:14.5px;font-weight:500;background:#fff;transition:.18s}
+.chip u{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--muted);text-decoration:none}
+.chip:hover{border-color:var(--pine);color:var(--pine);transform:translateY(-1px)}
+.chip:hover u{color:var(--pine)}
+.toolrow{display:flex;gap:8px;margin:14px 0 0}
+
+.sec{border-bottom:1px solid var(--stone);scroll-margin-top:80px}
+.sec-head{display:flex;align-items:center;gap:20px;padding:26px 0;cursor:pointer;list-style:none;user-select:none}
+.sec-head::-webkit-details-marker{display:none}
+.sec-head:focus-visible{outline:2px solid var(--pine);outline-offset:-2px;border-radius:6px}
+.sec-t{flex:1;min-width:0}
+.sec-h2{display:block;font-family:"Fraunces",Georgia,serif;font-weight:400;font-size:clamp(24px,3.2vw,32px);letter-spacing:-.025em;line-height:1.15}
+.sec-b{display:block;color:var(--muted);font-size:14.5px;margin-top:5px;max-width:56ch}
+.sec-n{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--muted);white-space:nowrap}
+.sec-n b{color:var(--brass);font-weight:500}
+.chev{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1px solid var(--stone-deep);flex:none;background:#fff}
+.chev svg{width:15px;height:15px;stroke:var(--ink);fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;transition:transform .22s ease}
+.sec[open] .chev svg{transform:rotate(180deg)}
+.sec[open] .sec-head{padding-bottom:14px}
+.sec-body{padding-bottom:34px}
+
+.subhead{font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin:26px 0 14px;display:flex;align-items:center;gap:12px;font-weight:400}
+.subhead::after{content:"";flex:1;height:1px;background:var(--stone-deep)}
+.subhead:first-child{margin-top:6px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:14px}
+.grid[hidden]{display:none}
+.card{position:relative;background:#fff;border:1px solid var(--stone);border-radius:10px;padding:16px 16px 14px;display:flex;flex-direction:column;gap:12px;transition:.18s}
+.card[hidden]{display:none}
+.card:hover{border-color:var(--stone-deep);box-shadow:var(--shadow);transform:translateY(-2px)}
+.card.done{background:var(--brass-soft);border-color:#E8DDB8}
+.card.done .name{text-decoration:line-through;text-decoration-thickness:1px;color:var(--muted)}
+.card.done .slot{opacity:.4}
+.tick{touch-action:manipulation;-webkit-tap-highlight-color:transparent;position:absolute;top:8px;right:8px;width:34px;height:34px;display:grid;place-items:center;cursor:pointer;z-index:2}
+.tick::before{content:"";position:absolute;width:22px;height:22px;border-radius:6px;border:1.5px solid var(--stone-deep);background:#fff;transition:.15s}
+.tick input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:pointer;-webkit-appearance:none;appearance:none;z-index:1}
+.tick input:checked~svg{opacity:1}
+.tick:has(input:checked)::before{background:var(--brass);border-color:var(--brass)}
+.tick:hover::before{border-color:var(--brass)}
+.tick svg{pointer-events:none;position:relative;z-index:1;width:12px;height:12px;stroke:#fff;fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;opacity:0;transition:opacity .15s}
+.tick.on::before{background:var(--brass);border-color:var(--brass)}
+.tick.on svg{opacity:1}
+.tick:has(input:focus-visible)::before{outline:2px solid var(--pine);outline-offset:2px}
+.slot{width:100%;aspect-ratio:16/10;border-radius:7px;background:var(--pine-soft);display:grid;place-items:center;overflow:hidden}
+.slot img{width:100%;height:100%;object-fit:cover;display:block}
+.slot svg{width:30px;height:30px;stroke:var(--pine);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;opacity:.75}
+.name{font-weight:600;font-size:15.5px;line-height:1.3;letter-spacing:-.01em;margin:0;padding-right:34px}
+.opt{font-family:"JetBrains Mono",monospace;font-size:10.5px;color:var(--brass);letter-spacing:.08em;text-transform:uppercase}
+.desc{margin:0;font-size:14px;color:var(--muted);line-height:1.5;flex:1}
+.go{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-size:13.5px;font-weight:600;color:var(--pine);margin-top:2px}
+.go svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;transition:transform .18s}
+.go:hover svg{transform:translateX(3px)}
+
+.empty{padding:64px 0;text-align:center;color:var(--muted)}
+.empty[hidden]{display:none}
+.note{font-size:13px;color:var(--muted);border-left:2px solid var(--brass);padding:2px 0 2px 14px;margin:56px 0 0;max-width:60ch}
+footer{margin-top:72px;border-top:1px solid var(--stone);padding:44px 0 64px}
+.foot-in{display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between}
+footer p{margin:0 0 10px;font-size:14px;color:var(--muted);max-width:52ch}
+footer .brand{font-size:17px}
+
+@media (max-width:720px){
+.hero{padding:48px 0 34px}
+.search{order:3;flex-basis:100%;max-width:none;margin-left:0}
+.tally{margin-left:auto}
+.grid{grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:10px}
+.card{padding:13px}
+.pip{width:11px;height:11px}
+.sec-head{gap:12px;padding:20px 0}
+.sec-b{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body id="top">
+
+<header class="bar">
+<div class="wrap bar-in">
+<a class="brand" href="#top">The Seminary <span>List</span></a>
+<div class="search">
+<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+<input id="q" type="search" placeholder="Search 72 items — socks, egg crate, Advil…" aria-label="Search the list">
+</div>
+<div class="tally"><span><b id="tallyN">0</b> / 72 packed</span><button class="btn js-only" id="reset" type="button">Clear</button></div>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="wrap">
+<p class="eyebrow">Seminary packing list · 72 items · 9 categories</p>
+<h1>Everything you need for <em>the year.</em></h1>
+<p class="lede">One list, checked off as you go. Every item links straight to Amazon, so you can shop the whole thing in an afternoon instead of six browser tabs and a group chat.</p>
+<div class="meter-grid" id="meter" aria-hidden="true"><i class="pip" data-pip="dorm-shabbat-lamp"></i><i class="pip" data-pip="dorm-lighted-vanity-mirror"></i><i class="pip" data-pip="dorm-linen-set"></i><i class="pip" data-pip="dorm-egg-crate-mattress-topper"></i><i class="pip" data-pip="dorm-sleep-sack"></i><i class="pip" data-pip="dorm-sleep-mask"></i><i class="pip" data-pip="dorm-white-noise-machine"></i><i class="pip" data-pip="dorm-portable-fan"></i><i class="pip" data-pip="dorm-alarm-clock"></i><i class="pip" data-pip="store-organizer-bins"></i><i class="pip" data-pip="store-stick-on-hooks"></i><i class="pip" data-pip="store-clothes-drying-rack"></i><i class="pip" data-pip="store-foldable-drying-rack"></i><i class="pip" data-pip="store-small-hamper"></i><i class="pip" data-pip="store-over-door-shoe-rack"></i><i class="pip" data-pip="laundry-downy-unstopables"></i><i class="pip" data-pip="laundry-tide-pods"></i><i class="pip" data-pip="laundry-downy-scent-booster-beads"></i><i class="pip" data-pip="laundry-dryer-sheets"></i><i class="pip" data-pip="laundry-mesh-laundry-bags"></i><i class="pip" data-pip="laundry-tide-to-go-pen"></i><i class="pip" data-pip="care-shower-caddy"></i><i class="pip" data-pip="care-toothbrush-travel-case"></i><i class="pip" data-pip="care-toothbrush-covers"></i><i class="pip" data-pip="care-deodorant-4-pack"></i><i class="pip" data-pip="care-hair-ties-100-pack"></i><i class="pip" data-pip="care-cotton-rounds-q-tips"></i><i class="pip" data-pip="care-dae-styling-stick"></i><i class="pip" data-pip="care-makeup-remover-wipes"></i><i class="pip" data-pip="care-mini-makeup-removers"></i><i class="pip" data-pip="care-advil"></i><i class="pip" data-pip="care-nyquil-dayquil"></i><i class="pip" data-pip="care-benadryl"></i><i class="pip" data-pip="clothes-nike-crew-socks"></i><i class="pip" data-pip="clothes-adidas-crew-socks"></i><i class="pip" data-pip="clothes-striped-crew-socks"></i><i class="pip" data-pip="clothes-native-water-shoes"></i><i class="pip" data-pip="clothes-fashion-tape"></i><i class="pip" data-pip="clothes-body-glove"></i><i class="pip" data-pip="tech-24-6-media-player"></i><i class="pip" data-pip="tech-innioasis-mp3-player"></i><i class="pip" data-pip="tech-jbl-speaker-small"></i><i class="pip" data-pip="tech-jbl-speaker-large"></i><i class="pip" data-pip="tech-travel-adaptor"></i><i class="pip" data-pip="tech-portable-charger"></i><i class="pip" data-pip="tech-canon-powershot-v10"></i><i class="pip" data-pip="tech-camera"></i><i class="pip" data-pip="tech-instant-print-camera"></i><i class="pip" data-pip="study-mechanical-pencils"></i><i class="pip" data-pip="study-highlighters"></i><i class="pip" data-pip="study-sticky-tabs"></i><i class="pip" data-pip="study-sticky-notes"></i><i class="pip" data-pip="books-you-revealed"></i><i class="pip" data-pip="books-olam-hamiddos"></i><i class="pip" data-pip="books-olam-haavodah"></i><i class="pip" data-pip="books-mean-what-you-pray"></i><i class="pip" data-pip="books-gates-of-prayer"></i><i class="pip" data-pip="books-chofetz-chaim-a-lesson-a-day"></i><i class="pip" data-pip="books-ka-asher-tziva-hashem"></i><i class="pip" data-pip="books-living-inspired"></i><i class="pip" data-pip="books-reclaiming-dignity"></i><i class="pip" data-pip="books-emunah-in-reality"></i><i class="pip" data-pip="books-attached"></i><i class="pip" data-pip="go-packing-cubes"></i><i class="pip" data-pip="go-carry-on-suitcase"></i><i class="pip" data-pip="go-stick-on-phone-wallet"></i><i class="pip" data-pip="go-toiletry-makeup-bag"></i><i class="pip" data-pip="go-travel-size-mouthwash"></i><i class="pip" data-pip="go-travel-size-shampoo-set"></i><i class="pip" data-pip="go-flashlight"></i><i class="pip" data-pip="go-owala-water-bottle"></i><i class="pip" data-pip="go-stanley-tumbler"></i></div>
+<p class="meter-cap"><b id="capDone">0 packed</b> · <span id="capLeft">72 to go</span></p>
+</div>
+</section>
+
+<section class="cats">
+<div class="wrap">
+<div class="cats-row"><a class="chip" href="#dorm" data-jump="dorm">Dorm Room <u>9</u></a>
+<a class="chip" href="#store" data-jump="store">Storage &amp; Organizing <u>6</u></a>
+<a class="chip" href="#laundry" data-jump="laundry">Laundry <u>6</u></a>
+<a class="chip" href="#care" data-jump="care">Health &amp; Personal Care <u>12</u></a>
+<a class="chip" href="#clothes" data-jump="clothes">Clothes <u>6</u></a>
+<a class="chip" href="#tech" data-jump="tech">Tech &amp; Gadgets <u>9</u></a>
+<a class="chip" href="#study" data-jump="study">Study &amp; Stationery <u>4</u></a>
+<a class="chip" href="#books" data-jump="books">Books <u>11</u></a>
+<a class="chip" href="#go" data-jump="go">On the Go <u>9</u></a></div>
+<div class="toolrow js-only"><button class="btn" id="openAll" type="button">Expand all</button><button class="btn" id="shutAll" type="button">Collapse all</button></div>
+</div>
+</section>
+
+<div class="wrap">
+<details class="sec" id="dorm" data-sec="dorm" open>
+<summary class="sec-head">
+<span class="sec-t"><span class="sec-h2">Dorm Room</span><span class="sec-b">The bed, the light, the air, the noise. Get these right and the room feels like yours by week two.</span></span>
+<span class="sec-n"><b data-secdone="dorm">0</b>/9</span>
+<span class="chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+</summary>
+<div class="sec-body">
+<h4 class="subhead" data-sub>Lighting &amp; mirrors</h4><div class="grid"><article class="card" data-card="p0" data-group="dorm-shabbat-lamp" data-key="shabbat-lamp" data-text="shabbat lamp twist the shade to cover or reveal the bulb. the one dorm item nobody thinks of until friday night. lighting &amp; mirrors dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-shabbat-lamp" aria-label="Mark Shabbat Lamp as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l3 8H5z"/><path d="M12 11v8"/><path d="M8 21h8"/></svg></div>
+<h3 class="name">Shabbat Lamp</h3>
+<p class="desc">Twist the shade to cover or reveal the bulb. The one dorm item nobody thinks of until Friday night.</p>
+<a class="go" href="https://amzn.to/4csZfug" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p1" data-group="dorm-lighted-vanity-mirror" data-key="lighted-vanity-mirror-option-a" data-text="lighted vanity mirror dorm overhead lighting is unkind. a lit mirror fixes that. lighting &amp; mirrors dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-lighted-vanity-mirror" aria-label="Mark Lighted Vanity Mirror as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="15" rx="6"/><path d="M9 21h6"/><path d="M12 18v3"/></svg></div>
+<h3 class="name">Lighted Vanity Mirror <span class="opt">Option A</span></h3>
+<p class="desc">Dorm overhead lighting is unkind. A lit mirror fixes that.</p>
+<a class="go" href="https://amzn.to/4z6VZyp" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p2" data-group="dorm-lighted-vanity-mirror" data-key="lighted-vanity-mirror-option-b" data-text="lighted vanity mirror second pick, if the first is out of stock or the wrong size for your desk. lighting &amp; mirrors dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-lighted-vanity-mirror" aria-label="Mark Lighted Vanity Mirror as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="15" rx="6"/><path d="M9 21h6"/><path d="M12 18v3"/></svg></div>
+<h3 class="name">Lighted Vanity Mirror <span class="opt">Option B</span></h3>
+<p class="desc">Second pick, if the first is out of stock or the wrong size for your desk.</p>
+<a class="go" href="https://amzn.to/3REt5Fh" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+<h4 class="subhead" data-sub>Sleep &amp; bedding</h4><div class="grid"><article class="card" data-card="p3" data-group="dorm-linen-set" data-key="linen-set-option-a" data-text="linen set bring two sets. one is always in the wash and the machines are always busy. sleep &amp; bedding dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-linen-set" aria-label="Mark Linen Set as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-7h18v7"/><path d="M3 18v2M21 18v2"/><path d="M6 11V8h5v3"/></svg></div>
+<h3 class="name">Linen Set <span class="opt">Option A</span></h3>
+<p class="desc">Bring two sets. One is always in the wash and the machines are always busy.</p>
+<a class="go" href="https://amzn.to/4hplLb0" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p4" data-group="dorm-linen-set" data-key="linen-set-option-b" data-text="linen set a second set in a different colour so you can tell them apart in the laundry room. sleep &amp; bedding dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-linen-set" aria-label="Mark Linen Set as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-7h18v7"/><path d="M3 18v2M21 18v2"/><path d="M6 11V8h5v3"/></svg></div>
+<h3 class="name">Linen Set <span class="opt">Option B</span></h3>
+<p class="desc">A second set in a different colour so you can tell them apart in the laundry room.</p>
+<a class="go" href="https://amzn.to/4hXWO6v" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p5" data-group="dorm-egg-crate-mattress-topper" data-key="egg-crate-mattress-topper-option-a" data-text="egg crate mattress topper dorm mattresses are thin. this is the highest-impact thing you can pack. sleep &amp; bedding dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-egg-crate-mattress-topper" aria-label="Mark Egg Crate Mattress Topper as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-7h18v7"/><path d="M3 18v2M21 18v2"/><path d="M6 11V8h5v3"/></svg></div>
+<h3 class="name">Egg Crate Mattress Topper <span class="opt">Option A</span></h3>
+<p class="desc">Dorm mattresses are thin. This is the highest-impact thing you can pack.</p>
+<a class="go" href="https://amzn.to/4wsNFa0" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p6" data-group="dorm-egg-crate-mattress-topper" data-key="egg-crate-mattress-topper-option-b" data-text="egg crate mattress topper alternative thickness. check your bed size before ordering. sleep &amp; bedding dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-egg-crate-mattress-topper" aria-label="Mark Egg Crate Mattress Topper as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-7h18v7"/><path d="M3 18v2M21 18v2"/><path d="M6 11V8h5v3"/></svg></div>
+<h3 class="name">Egg Crate Mattress Topper <span class="opt">Option B</span></h3>
+<p class="desc">Alternative thickness. Check your bed size before ordering.</p>
+<a class="go" href="https://amzn.to/4g0EwiB" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p7" data-group="dorm-egg-crate-mattress-topper" data-key="egg-crate-mattress-topper-option-c" data-text="egg crate mattress topper a third option if the others do not ship in time. sleep &amp; bedding dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-egg-crate-mattress-topper" aria-label="Mark Egg Crate Mattress Topper as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18v-7h18v7"/><path d="M3 18v2M21 18v2"/><path d="M6 11V8h5v3"/></svg></div>
+<h3 class="name">Egg Crate Mattress Topper <span class="opt">Option C</span></h3>
+<p class="desc">A third option if the others do not ship in time.</p>
+<a class="go" href="https://amzn.to/45MzO3c" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p8" data-group="dorm-sleep-sack" data-key="sleep-sack-option-a" data-text="sleep sack lighter than a duvet and easy to wash. good for warm israeli nights. sleep &amp; bedding dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-sleep-sack" aria-label="Mark Sleep Sack as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a8 8 0 11-9.5-9.8A6.5 6.5 0 0020 14z"/></svg></div>
+<h3 class="name">Sleep Sack <span class="opt">Option A</span></h3>
+<p class="desc">Lighter than a duvet and easy to wash. Good for warm Israeli nights.</p>
+<a class="go" href="https://amzn.to/4wfLhTO" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p9" data-group="dorm-sleep-sack" data-key="sleep-sack-option-b" data-text="sleep sack second pick, in a different weight. sleep &amp; bedding dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-sleep-sack" aria-label="Mark Sleep Sack as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14a8 8 0 11-9.5-9.8A6.5 6.5 0 0020 14z"/></svg></div>
+<h3 class="name">Sleep Sack <span class="opt">Option B</span></h3>
+<p class="desc">Second pick, in a different weight.</p>
+<a class="go" href="https://amzn.to/3RWBALY" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p10" data-group="dorm-sleep-mask" data-key="sleep-mask" data-text="sleep mask roommates keep different hours. this settles it without a conversation. sleep &amp; bedding dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-sleep-mask" aria-label="Mark Sleep Mask as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="14" r="3.5"/><circle cx="17" cy="14" r="3.5"/><path d="M10.5 14h3"/><path d="M3.5 12l2-4M20.5 12l-2-4"/></svg></div>
+<h3 class="name">Sleep Mask</h3>
+<p class="desc">Roommates keep different hours. This settles it without a conversation.</p>
+<a class="go" href="https://amzn.to/4hYqel4" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+<h4 class="subhead" data-sub>Air &amp; sound</h4><div class="grid"><article class="card" data-card="p11" data-group="dorm-white-noise-machine" data-key="white-noise-machine-option-a" data-text="white noise machine covers hallway noise, street noise, and a roommate on a late call home. air &amp; sound dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-white-noise-machine" aria-label="Mark White Noise Machine as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9h3l4-3v12l-4-3H6z"/><path d="M16 9a4 4 0 010 6"/></svg></div>
+<h3 class="name">White Noise Machine <span class="opt">Option A</span></h3>
+<p class="desc">Covers hallway noise, street noise, and a roommate on a late call home.</p>
+<a class="go" href="https://amzn.to/4wPqVSx" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p12" data-group="dorm-white-noise-machine" data-key="white-noise-machine-option-b" data-text="white noise machine a compact alternative that packs smaller. air &amp; sound dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-white-noise-machine" aria-label="Mark White Noise Machine as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9h3l4-3v12l-4-3H6z"/><path d="M16 9a4 4 0 010 6"/></svg></div>
+<h3 class="name">White Noise Machine <span class="opt">Option B</span></h3>
+<p class="desc">A compact alternative that packs smaller.</p>
+<a class="go" href="https://amzn.to/4z99n56" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p13" data-group="dorm-white-noise-machine" data-key="white-noise-machine-option-c" data-text="white noise machine third pick, if you want more sound options. air &amp; sound dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-white-noise-machine" aria-label="Mark White Noise Machine as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9h3l4-3v12l-4-3H6z"/><path d="M16 9a4 4 0 010 6"/></svg></div>
+<h3 class="name">White Noise Machine <span class="opt">Option C</span></h3>
+<p class="desc">Third pick, if you want more sound options.</p>
+<a class="go" href="https://amzn.to/4fNSHIV" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p14" data-group="dorm-portable-fan" data-key="portable-fan-option-a" data-text="portable fan not every room has air conditioning, and september in israel is still summer. air &amp; sound dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-portable-fan" aria-label="Mark Portable Fan as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10c0-3 1-6 4-6s2 4-1 5"/><path d="M14 12c3 0 6 1 6 4s-4 2-5-1"/><path d="M10 14c0 3-1 6-4 6s-2-4 1-5"/></svg></div>
+<h3 class="name">Portable Fan <span class="opt">Option A</span></h3>
+<p class="desc">Not every room has air conditioning, and September in Israel is still summer.</p>
+<a class="go" href="https://amzn.to/4xvR4po" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p15" data-group="dorm-portable-fan" data-key="portable-fan-option-b" data-text="portable fan alternative size. check that it runs on your voltage or a usb port. air &amp; sound dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-portable-fan" aria-label="Mark Portable Fan as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10c0-3 1-6 4-6s2 4-1 5"/><path d="M14 12c3 0 6 1 6 4s-4 2-5-1"/><path d="M10 14c0 3-1 6-4 6s-2-4 1-5"/></svg></div>
+<h3 class="name">Portable Fan <span class="opt">Option B</span></h3>
+<p class="desc">Alternative size. Check that it runs on your voltage or a USB port.</p>
+<a class="go" href="https://amzn.to/4xwH5A5" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p16" data-group="dorm-alarm-clock" data-key="alarm-clock-option-a" data-text="alarm clock a real clock means your phone can stay across the room, which is the whole point. air &amp; sound dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-alarm-clock" aria-label="Mark Alarm Clock as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+<h3 class="name">Alarm Clock <span class="opt">Option A</span></h3>
+<p class="desc">A real clock means your phone can stay across the room, which is the whole point.</p>
+<a class="go" href="https://amzn.to/45Pxs3z" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p17" data-group="dorm-alarm-clock" data-key="alarm-clock-option-b" data-text="alarm clock second pick, if you want a different display style. air &amp; sound dorm room">
+<label class="tick"><input type="checkbox" data-tick="dorm-alarm-clock" aria-label="Mark Alarm Clock as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+<h3 class="name">Alarm Clock <span class="opt">Option B</span></h3>
+<p class="desc">Second pick, if you want a different display style.</p>
+<a class="go" href="https://amzn.to/4wo4cfb" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+</div>
+</details>
+<details class="sec" id="store" data-sec="store">
+<summary class="sec-head">
+<span class="sec-t"><span class="sec-h2">Storage &amp; Organizing</span><span class="sec-b">Seminary rooms are small and shared. Everything here buys you floor space or wall space.</span></span>
+<span class="sec-n"><b data-secdone="store">0</b>/6</span>
+<span class="chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+</summary>
+<div class="sec-body">
+<h4 class="subhead" data-sub>Bins &amp; hooks</h4><div class="grid"><article class="card" data-card="p18" data-group="store-organizer-bins" data-key="organizer-bins-option-a" data-text="organizer bins for under the bed and on top of the closet. contain the mess before it starts. bins &amp; hooks storage &amp; organizing">
+<label class="tick"><input type="checkbox" data-tick="store-organizer-bins" aria-label="Mark Organizer Bins as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16l-1.5 11h-13z"/><path d="M4 8l1-3h14l1 3"/><path d="M10 12v4M14 12v4"/></svg></div>
+<h3 class="name">Organizer Bins <span class="opt">Option A</span></h3>
+<p class="desc">For under the bed and on top of the closet. Contain the mess before it starts.</p>
+<a class="go" href="https://amzn.to/4z9vMiR" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p19" data-group="store-organizer-bins" data-key="organizer-bins-option-b" data-text="organizer bins a second size, for drawers and desk shelves. bins &amp; hooks storage &amp; organizing">
+<label class="tick"><input type="checkbox" data-tick="store-organizer-bins" aria-label="Mark Organizer Bins as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16l-1.5 11h-13z"/><path d="M4 8l1-3h14l1 3"/><path d="M10 12v4M14 12v4"/></svg></div>
+<h3 class="name">Organizer Bins <span class="opt">Option B</span></h3>
+<p class="desc">A second size, for drawers and desk shelves.</p>
+<a class="go" href="https://amzn.to/4xu5ohW" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p20" data-group="store-stick-on-hooks" data-key="stick-on-hooks-option-a" data-text="stick-on hooks most dorms will not let you put a nail in the wall. these are the workaround. bins &amp; hooks storage &amp; organizing">
+<label class="tick"><input type="checkbox" data-tick="store-stick-on-hooks" aria-label="Mark Stick-On Hooks as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v9a3 3 0 006 0"/><path d="M9 20h6"/><path d="M12 17v3"/></svg></div>
+<h3 class="name">Stick-On Hooks <span class="opt">Option A</span></h3>
+<p class="desc">Most dorms will not let you put a nail in the wall. These are the workaround.</p>
+<a class="go" href="https://amzn.to/3UomWh9" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p21" data-group="store-stick-on-hooks" data-key="stick-on-hooks-option-b" data-text="stick-on hooks different weight rating. buy more than you think you need. bins &amp; hooks storage &amp; organizing">
+<label class="tick"><input type="checkbox" data-tick="store-stick-on-hooks" aria-label="Mark Stick-On Hooks as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v9a3 3 0 006 0"/><path d="M9 20h6"/><path d="M12 17v3"/></svg></div>
+<h3 class="name">Stick-On Hooks <span class="opt">Option B</span></h3>
+<p class="desc">Different weight rating. Buy more than you think you need.</p>
+<a class="go" href="https://amzn.to/4qaC9hR" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p22" data-group="store-stick-on-hooks" data-key="stick-on-hooks-option-c" data-text="stick-on hooks a third style, for towels and heavier items. bins &amp; hooks storage &amp; organizing">
+<label class="tick"><input type="checkbox" data-tick="store-stick-on-hooks" aria-label="Mark Stick-On Hooks as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v9a3 3 0 006 0"/><path d="M9 20h6"/><path d="M12 17v3"/></svg></div>
+<h3 class="name">Stick-On Hooks <span class="opt">Option C</span></h3>
+<p class="desc">A third style, for towels and heavier items.</p>
+<a class="go" href="https://amzn.to/4g0EFCF" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+<h4 class="subhead" data-sub>Racks &amp; hampers</h4><div class="grid"><article class="card" data-card="p23" data-group="store-clothes-drying-rack" data-key="clothes-drying-rack-option-a" data-text="clothes drying rack dryers are scarce and hard on your clothes. a folding rack pays for itself. racks &amp; hampers storage &amp; organizing">
+<label class="tick"><input type="checkbox" data-tick="store-clothes-drying-rack" aria-label="Mark Clothes Drying Rack as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M7 6v13M12 6v13M17 6v13"/></svg></div>
+<h3 class="name">Clothes Drying Rack <span class="opt">Option A</span></h3>
+<p class="desc">Dryers are scarce and hard on your clothes. A folding rack pays for itself.</p>
+<a class="go" href="https://amzn.to/4hoVUQy" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p24" data-group="store-clothes-drying-rack" data-key="clothes-drying-rack-option-b" data-text="clothes drying rack second pick, if you need something that folds flatter. racks &amp; hampers storage &amp; organizing">
+<label class="tick"><input type="checkbox" data-tick="store-clothes-drying-rack" aria-label="Mark Clothes Drying Rack as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M7 6v13M12 6v13M17 6v13"/></svg></div>
+<h3 class="name">Clothes Drying Rack <span class="opt">Option B</span></h3>
+<p class="desc">Second pick, if you need something that folds flatter.</p>
+<a class="go" href="https://amzn.to/4hXWqF5" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p25" data-group="store-foldable-drying-rack" data-key="foldable-drying-rack" data-text="foldable drying rack folds flat against a wall when you are not using it, which matters in a room you share. racks &amp; hampers storage &amp; organizing">
+<label class="tick"><input type="checkbox" data-tick="store-foldable-drying-rack" aria-label="Mark Foldable Drying Rack as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M7 6v13M12 6v13M17 6v13"/></svg></div>
+<h3 class="name">Foldable Drying Rack</h3>
+<p class="desc">Folds flat against a wall when you are not using it, which matters in a room you share.</p>
+<a class="go" href="https://amzn.to/4xCoZge" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p26" data-group="store-small-hamper" data-key="small-hamper-option-a" data-text="small hamper small on purpose. a big one just means you wash less often. racks &amp; hampers storage &amp; organizing">
+<label class="tick"><input type="checkbox" data-tick="store-small-hamper" aria-label="Mark Small Hamper as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M8 8V6a4 4 0 018 0v2"/></svg></div>
+<h3 class="name">Small Hamper <span class="opt">Option A</span></h3>
+<p class="desc">Small on purpose. A big one just means you wash less often.</p>
+<a class="go" href="https://amzn.to/4bAomLA" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p27" data-group="store-small-hamper" data-key="small-hamper-option-b" data-text="small hamper collapsible alternative that packs flat in a suitcase. racks &amp; hampers storage &amp; organizing">
+<label class="tick"><input type="checkbox" data-tick="store-small-hamper" aria-label="Mark Small Hamper as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M8 8V6a4 4 0 018 0v2"/></svg></div>
+<h3 class="name">Small Hamper <span class="opt">Option B</span></h3>
+<p class="desc">Collapsible alternative that packs flat in a suitcase.</p>
+<a class="go" href="https://amzn.to/45P0foR" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p28" data-group="store-over-door-shoe-rack" data-key="over-door-shoe-rack-option-a" data-text="over-door shoe rack shoes off the floor. the pockets also work for snacks and toiletries. racks &amp; hampers storage &amp; organizing">
+<label class="tick"><input type="checkbox" data-tick="store-over-door-shoe-rack" aria-label="Mark Over-Door Shoe Rack as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16h13l4-2-2-4-4 1-3-3H3z"/><path d="M3 16v2h18v-2"/></svg></div>
+<h3 class="name">Over-Door Shoe Rack <span class="opt">Option A</span></h3>
+<p class="desc">Shoes off the floor. The pockets also work for snacks and toiletries.</p>
+<a class="go" href="https://amzn.to/4cujrvM" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p29" data-group="store-over-door-shoe-rack" data-key="over-door-shoe-rack-option-b" data-text="over-door shoe rack second pick, with a different number of pockets. racks &amp; hampers storage &amp; organizing">
+<label class="tick"><input type="checkbox" data-tick="store-over-door-shoe-rack" aria-label="Mark Over-Door Shoe Rack as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16h13l4-2-2-4-4 1-3-3H3z"/><path d="M3 16v2h18v-2"/></svg></div>
+<h3 class="name">Over-Door Shoe Rack <span class="opt">Option B</span></h3>
+<p class="desc">Second pick, with a different number of pockets.</p>
+<a class="go" href="https://amzn.to/4hYT0ly" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+</div>
+</details>
+<details class="sec" id="laundry" data-sec="laundry">
+<summary class="sec-head">
+<span class="sec-t"><span class="sec-h2">Laundry</span><span class="sec-b">Communal machines and a shared detergent shelf. Pods travel better than liquid.</span></span>
+<span class="sec-n"><b data-secdone="laundry">0</b>/6</span>
+<span class="chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+</summary>
+<div class="sec-body">
+<div class="grid"><article class="card" data-card="p30" data-group="laundry-downy-unstopables" data-key="downy-unstopables" data-text="downy unstopables in-wash scent beads. a little goes a long way and the smell of home lasts weeks.  laundry">
+<label class="tick"><input type="checkbox" data-tick="laundry-downy-unstopables" aria-label="Mark Downy Unstopables as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4s5 6 5 9a5 5 0 11-10 0c0-3 5-9 5-9z"/></svg></div>
+<h3 class="name">Downy Unstopables</h3>
+<p class="desc">In-wash scent beads. A little goes a long way and the smell of home lasts weeks.</p>
+<a class="go" href="https://amzn.to/4giwDGx" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p31" data-group="laundry-tide-pods" data-key="tide-pods" data-text="tide pods pre-measured, no spills in a suitcase, no arguments over whose detergent that is.  laundry">
+<label class="tick"><input type="checkbox" data-tick="laundry-tide-pods" aria-label="Mark Tide Pods as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4s5 6 5 9a5 5 0 11-10 0c0-3 5-9 5-9z"/></svg></div>
+<h3 class="name">Tide Pods</h3>
+<p class="desc">Pre-measured, no spills in a suitcase, no arguments over whose detergent that is.</p>
+<a class="go" href="https://amzn.to/4z5oUD0" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p32" data-group="laundry-downy-scent-booster-beads" data-key="downy-scent-booster-beads" data-text="downy scent booster beads the gentler scent, if unstopables is too strong for you.  laundry">
+<label class="tick"><input type="checkbox" data-tick="laundry-downy-scent-booster-beads" aria-label="Mark Downy Scent Booster Beads as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4s5 6 5 9a5 5 0 11-10 0c0-3 5-9 5-9z"/></svg></div>
+<h3 class="name">Downy Scent Booster Beads</h3>
+<p class="desc">The gentler scent, if Unstopables is too strong for you.</p>
+<a class="go" href="https://amzn.to/4wmAo2l" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p33" data-group="laundry-dryer-sheets" data-key="dryer-sheets" data-text="dryer sheets static is worse on synthetic skirts and uniforms than you expect.  laundry">
+<label class="tick"><input type="checkbox" data-tick="laundry-dryer-sheets" aria-label="Mark Dryer Sheets as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4s5 6 5 9a5 5 0 11-10 0c0-3 5-9 5-9z"/></svg></div>
+<h3 class="name">Dryer Sheets</h3>
+<p class="desc">Static is worse on synthetic skirts and uniforms than you expect.</p>
+<a class="go" href="https://amzn.to/4x8nGWx" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p34" data-group="laundry-mesh-laundry-bags" data-key="mesh-laundry-bags" data-text="mesh laundry bags for tights, delicates, and anything you would rather a communal machine did not eat.  laundry">
+<label class="tick"><input type="checkbox" data-tick="laundry-mesh-laundry-bags" aria-label="Mark Mesh Laundry Bags as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1 12H6z"/><path d="M8 8V6a4 4 0 018 0v2"/></svg></div>
+<h3 class="name">Mesh Laundry Bags</h3>
+<p class="desc">For tights, delicates, and anything you would rather a communal machine did not eat.</p>
+<a class="go" href="https://amzn.to/4hjF3OV" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p35" data-group="laundry-tide-to-go-pen" data-key="tide-to-go-pen" data-text="tide to go pen keep one in your bag. shabbat table accidents happen an hour before you can change.  laundry">
+<label class="tick"><input type="checkbox" data-tick="laundry-tide-to-go-pen" aria-label="Mark Tide To Go Pen as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21l2-6 10-10 3 3-10 10z"/><path d="M15 5l3 3"/></svg></div>
+<h3 class="name">Tide To Go Pen</h3>
+<p class="desc">Keep one in your bag. Shabbat table accidents happen an hour before you can change.</p>
+<a class="go" href="https://amzn.to/3TMIfc5" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+</div>
+</details>
+<details class="sec" id="care" data-sec="care">
+<summary class="sec-head">
+<span class="sec-t"><span class="sec-h2">Health &amp; Personal Care</span><span class="sec-b">The shower caddy you will use daily, and the medicine cabinet you will be grateful for at 2am.</span></span>
+<span class="sec-n"><b data-secdone="care">0</b>/12</span>
+<span class="chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+</summary>
+<div class="sec-body">
+<h4 class="subhead" data-sub>Bath &amp; shower</h4><div class="grid"><article class="card" data-card="p36" data-group="care-shower-caddy" data-key="shower-caddy-option-a" data-text="shower caddy communal bathrooms mean everything travels with you. get one that drains. bath &amp; shower health &amp; personal care">
+<label class="tick"><input type="checkbox" data-tick="care-shower-caddy" aria-label="Mark Shower Caddy as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M9 10V7a3 3 0 016 0v3"/></svg></div>
+<h3 class="name">Shower Caddy <span class="opt">Option A</span></h3>
+<p class="desc">Communal bathrooms mean everything travels with you. Get one that drains.</p>
+<a class="go" href="https://amzn.to/4qaC0ej" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p37" data-group="care-shower-caddy" data-key="shower-caddy-option-b" data-text="shower caddy second pick, in a different shape. bath &amp; shower health &amp; personal care">
+<label class="tick"><input type="checkbox" data-tick="care-shower-caddy" aria-label="Mark Shower Caddy as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M9 10V7a3 3 0 016 0v3"/></svg></div>
+<h3 class="name">Shower Caddy <span class="opt">Option B</span></h3>
+<p class="desc">Second pick, in a different shape.</p>
+<a class="go" href="https://amzn.to/3TOwFgD" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p38" data-group="care-toothbrush-travel-case" data-key="toothbrush-travel-case" data-text="toothbrush travel case your toothbrush should not sit on a shared sink. this is not negotiable. bath &amp; shower health &amp; personal care">
+<label class="tick"><input type="checkbox" data-tick="care-toothbrush-travel-case" aria-label="Mark Toothbrush Travel Case as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 20l3-3"/><path d="M9 17l8-9a2.5 2.5 0 013.5 3.5l-9 8z"/></svg></div>
+<h3 class="name">Toothbrush Travel Case</h3>
+<p class="desc">Your toothbrush should not sit on a shared sink. This is not negotiable.</p>
+<a class="go" href="https://amzn.to/4bI2PR8" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p39" data-group="care-toothbrush-covers" data-key="toothbrush-covers" data-text="toothbrush covers the lighter option if a full case is more than you need. bath &amp; shower health &amp; personal care">
+<label class="tick"><input type="checkbox" data-tick="care-toothbrush-covers" aria-label="Mark Toothbrush Covers as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 20l3-3"/><path d="M9 17l8-9a2.5 2.5 0 013.5 3.5l-9 8z"/></svg></div>
+<h3 class="name">Toothbrush Covers</h3>
+<p class="desc">The lighter option if a full case is more than you need.</p>
+<a class="go" href="https://amzn.to/4z9yTY5" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+<h4 class="subhead" data-sub>Everyday care</h4><div class="grid"><article class="card" data-card="p40" data-group="care-deodorant-4-pack" data-key="deodorant-4-pack" data-text="deodorant, 4-pack buy the year in advance. your brand may not exist in israeli pharmacies. everyday care health &amp; personal care">
+<label class="tick"><input type="checkbox" data-tick="care-deodorant-4-pack" aria-label="Mark Deodorant, 4-Pack as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M9 10V7a3 3 0 016 0v3"/></svg></div>
+<h3 class="name">Deodorant, 4-Pack</h3>
+<p class="desc">Buy the year in advance. Your brand may not exist in Israeli pharmacies.</p>
+<a class="go" href="https://amzn.to/4fWDnbH" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p41" data-group="care-hair-ties-100-pack" data-key="hair-ties-100-pack" data-text="hair ties, 100 pack they disappear at a rate no one can explain. bring far more than you think is reasonable. everyday care health &amp; personal care">
+<label class="tick"><input type="checkbox" data-tick="care-hair-ties-100-pack" aria-label="Mark Hair Ties, 100 Pack as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M9 10V7a3 3 0 016 0v3"/></svg></div>
+<h3 class="name">Hair Ties, 100 Pack</h3>
+<p class="desc">They disappear at a rate no one can explain. Bring far more than you think is reasonable.</p>
+<a class="go" href="https://amzn.to/4q8Gwd2" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p42" data-group="care-cotton-rounds-q-tips" data-key="cotton-rounds-q-tips" data-text="cotton rounds &amp; q-tips the two things you never think to pack and immediately need. restock before you go. everyday care health &amp; personal care">
+<label class="tick"><input type="checkbox" data-tick="care-cotton-rounds-q-tips" aria-label="Mark Cotton Rounds &amp; Q-Tips as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M9 10V7a3 3 0 016 0v3"/></svg></div>
+<h3 class="name">Cotton Rounds &amp; Q-Tips</h3>
+<p class="desc">The two things you never think to pack and immediately need. Restock before you go.</p>
+<a class="go" href="https://amzn.to/4q6zmX3" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p43" data-group="care-dae-styling-stick" data-key="dae-styling-stick" data-text="dae styling stick for smoothing flyaways and finishing a style in the two minutes before you leave. everyday care health &amp; personal care">
+<label class="tick"><input type="checkbox" data-tick="care-dae-styling-stick" aria-label="Mark Dae Styling Stick as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 20l3-3"/><path d="M9 17l8-9a2.5 2.5 0 013.5 3.5l-9 8z"/></svg></div>
+<h3 class="name">Dae Styling Stick</h3>
+<p class="desc">For smoothing flyaways and finishing a style in the two minutes before you leave.</p>
+<a class="go" href="https://amzn.to/3UpHYfj" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p44" data-group="care-makeup-remover-wipes" data-key="makeup-remover-wipes" data-text="makeup remover wipes for nights when the walk to the bathroom is one thing too many. everyday care health &amp; personal care">
+<label class="tick"><input type="checkbox" data-tick="care-makeup-remover-wipes" aria-label="Mark Makeup Remover Wipes as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M9 10V7a3 3 0 016 0v3"/></svg></div>
+<h3 class="name">Makeup Remover Wipes</h3>
+<p class="desc">For nights when the walk to the bathroom is one thing too many.</p>
+<a class="go" href="https://amzn.to/4gm3XfN" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p45" data-group="care-mini-makeup-removers" data-key="mini-makeup-removers" data-text="mini makeup removers travel size, for a bag or a shabbaton. everyday care health &amp; personal care">
+<label class="tick"><input type="checkbox" data-tick="care-mini-makeup-removers" aria-label="Mark Mini Makeup Removers as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M9 10V7a3 3 0 016 0v3"/></svg></div>
+<h3 class="name">Mini Makeup Removers</h3>
+<p class="desc">Travel size, for a bag or a Shabbaton.</p>
+<a class="go" href="https://amzn.to/4fOvBSD" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+<h4 class="subhead" data-sub>Medicine cabinet</h4><div class="grid"><article class="card" data-card="p46" data-group="care-advil" data-key="advil" data-text="advil familiar dosing in a country where the packaging will not be. medicine cabinet health &amp; personal care">
+<label class="tick"><input type="checkbox" data-tick="care-advil" aria-label="Mark Advil as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="7" rx="3.5"/><path d="M12 9v7"/></svg></div>
+<h3 class="name">Advil</h3>
+<p class="desc">Familiar dosing in a country where the packaging will not be.</p>
+<a class="go" href="https://amzn.to/4g2Ek2s" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p47" data-group="care-nyquil-dayquil" data-key="nyquil-dayquil" data-text="nyquil &amp; dayquil the first dorm cold goes around in october. have this before you need it. medicine cabinet health &amp; personal care">
+<label class="tick"><input type="checkbox" data-tick="care-nyquil-dayquil" aria-label="Mark NyQuil &amp; DayQuil as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="7" rx="3.5"/><path d="M12 9v7"/></svg></div>
+<h3 class="name">NyQuil &amp; DayQuil</h3>
+<p class="desc">The first dorm cold goes around in October. Have this before you need it.</p>
+<a class="go" href="https://amzn.to/4g35E0g" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p48" data-group="care-benadryl" data-key="benadryl" data-text="benadryl for allergies and reactions, and worth having on hand for a roommate too. medicine cabinet health &amp; personal care">
+<label class="tick"><input type="checkbox" data-tick="care-benadryl" aria-label="Mark Benadryl as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="7" rx="3.5"/><path d="M12 9v7"/></svg></div>
+<h3 class="name">Benadryl</h3>
+<p class="desc">For allergies and reactions, and worth having on hand for a roommate too.</p>
+<a class="go" href="https://amzn.to/4fVTAOo" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+</div>
+</details>
+<details class="sec" id="clothes" data-sec="clothes">
+<summary class="sec-head">
+<span class="sec-t"><span class="sec-h2">Clothes</span><span class="sec-b">The basics that quietly run out first.</span></span>
+<span class="sec-n"><b data-secdone="clothes">0</b>/6</span>
+<span class="chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+</summary>
+<div class="sec-body">
+<div class="grid"><article class="card" data-card="p49" data-group="clothes-nike-crew-socks" data-key="nike-crew-socks" data-text="nike crew socks socks vanish in communal laundry. buy the multipack, buy one brand.  clothes">
+<label class="tick"><input type="checkbox" data-tick="clothes-nike-crew-socks" aria-label="Mark Nike Crew Socks as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h5v9l4 4a3.5 3.5 0 01-5 5l-6-6V3z"/></svg></div>
+<h3 class="name">Nike Crew Socks</h3>
+<p class="desc">Socks vanish in communal laundry. Buy the multipack, buy one brand.</p>
+<a class="go" href="https://amzn.to/4c7qdaM" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p50" data-group="clothes-adidas-crew-socks" data-key="adidas-crew-socks" data-text="adidas crew socks same idea, different stripe. pick one house brand so pairs always match.  clothes">
+<label class="tick"><input type="checkbox" data-tick="clothes-adidas-crew-socks" aria-label="Mark Adidas Crew Socks as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h5v9l4 4a3.5 3.5 0 01-5 5l-6-6V3z"/></svg></div>
+<h3 class="name">Adidas Crew Socks</h3>
+<p class="desc">Same idea, different stripe. Pick one house brand so pairs always match.</p>
+<a class="go" href="https://amzn.to/4gmLwYo" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p51" data-group="clothes-striped-crew-socks" data-key="striped-crew-socks" data-text="striped crew socks for when you want something other than plain white.  clothes">
+<label class="tick"><input type="checkbox" data-tick="clothes-striped-crew-socks" aria-label="Mark Striped Crew Socks as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h5v9l4 4a3.5 3.5 0 01-5 5l-6-6V3z"/></svg></div>
+<h3 class="name">Striped Crew Socks</h3>
+<p class="desc">For when you want something other than plain white.</p>
+<a class="go" href="https://amzn.to/4wm4G5s" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p52" data-group="clothes-native-water-shoes" data-key="native-water-shoes" data-text="native water shoes for water hikes and the kinneret. they rinse clean and dry fast, which sneakers will not.  clothes">
+<label class="tick"><input type="checkbox" data-tick="clothes-native-water-shoes" aria-label="Mark Native Water Shoes as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 16h13l4-2-2-4-4 1-3-3H3z"/><path d="M3 16v2h18v-2"/></svg></div>
+<h3 class="name">Native Water Shoes</h3>
+<p class="desc">For water hikes and the Kinneret. They rinse clean and dry fast, which sneakers will not.</p>
+<a class="go" href="https://amzn.to/3UpnYtf" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p53" data-group="clothes-fashion-tape" data-key="fashion-tape" data-text="fashion tape double-sided tape for necklines, hems, and anything that will not stay put. keep a pack in your bag.  clothes">
+<label class="tick"><input type="checkbox" data-tick="clothes-fashion-tape" aria-label="Mark Fashion Tape as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3l4 2 4-2 4 3-2 3-1-1v12H7V8L6 9 4 6z"/></svg></div>
+<h3 class="name">Fashion Tape</h3>
+<p class="desc">Double-sided tape for necklines, hems, and anything that will not stay put. Keep a pack in your bag.</p>
+<a class="go" href="https://amzn.to/4wQBJji" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p54" data-group="clothes-body-glove" data-key="body-glove-option-a" data-text="body glove the layering piece that makes half your wardrobe work.  clothes">
+<label class="tick"><input type="checkbox" data-tick="clothes-body-glove" aria-label="Mark Body Glove as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3l4 2 4-2 4 3-2 3-1-1v12H7V8L6 9 4 6z"/></svg></div>
+<h3 class="name">Body Glove <span class="opt">Option A</span></h3>
+<p class="desc">The layering piece that makes half your wardrobe work.</p>
+<a class="go" href="https://amzn.to/4ct2NN6" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p55" data-group="clothes-body-glove" data-key="body-glove-option-b" data-text="body glove second pick, in a different cut or colour range.  clothes">
+<label class="tick"><input type="checkbox" data-tick="clothes-body-glove" aria-label="Mark Body Glove as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3l4 2 4-2 4 3-2 3-1-1v12H7V8L6 9 4 6z"/></svg></div>
+<h3 class="name">Body Glove <span class="opt">Option B</span></h3>
+<p class="desc">Second pick, in a different cut or colour range.</p>
+<a class="go" href="https://amzn.to/4bApzm6" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+</div>
+</details>
+<details class="sec" id="tech" data-sec="tech">
+<summary class="sec-head">
+<span class="sec-t"><span class="sec-h2">Tech &amp; Gadgets</span><span class="sec-b">Music, power, and a camera for the year you will want to remember properly.</span></span>
+<span class="sec-n"><b data-secdone="tech">0</b>/9</span>
+<span class="chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+</summary>
+<div class="sec-body">
+<h4 class="subhead" data-sub>Music &amp; audio</h4><div class="grid"><article class="card" data-card="p56" data-group="tech-24-6-media-player" data-key="24-6-media-player" data-text="24/6 media player a kosher media player with no browser and no distractions. built to be used on shabbat as well. music &amp; audio tech &amp; gadgets">
+<label class="tick"><input type="checkbox" data-tick="tech-24-6-media-player" aria-label="Mark 24/6 Media Player as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="16" r="2"/></svg></div>
+<h3 class="name">24/6 Media Player</h3>
+<p class="desc">A kosher media player with no browser and no distractions. Built to be used on Shabbat as well.</p>
+<a class="go" href="https://amzn.to/4q9pCey" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p57" data-group="tech-innioasis-mp3-player" data-key="innioasis-mp3-player-option-a" data-text="innioasis mp3 player music without a phone. useful for a year with a filtered or basic device. music &amp; audio tech &amp; gadgets">
+<label class="tick"><input type="checkbox" data-tick="tech-innioasis-mp3-player" aria-label="Mark Innioasis MP3 Player as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="16" r="2"/></svg></div>
+<h3 class="name">Innioasis MP3 Player <span class="opt">Option A</span></h3>
+<p class="desc">Music without a phone. Useful for a year with a filtered or basic device.</p>
+<a class="go" href="https://amzn.to/4g34Mc0" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p58" data-group="tech-innioasis-mp3-player" data-key="innioasis-mp3-player-option-b" data-text="innioasis mp3 player different storage size or colour. music &amp; audio tech &amp; gadgets">
+<label class="tick"><input type="checkbox" data-tick="tech-innioasis-mp3-player" aria-label="Mark Innioasis MP3 Player as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V6l10-2v12"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="16" r="2"/></svg></div>
+<h3 class="name">Innioasis MP3 Player <span class="opt">Option B</span></h3>
+<p class="desc">Different storage size or colour.</p>
+<a class="go" href="https://amzn.to/4xvvkd8" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p59" data-group="tech-jbl-speaker-small" data-key="jbl-speaker-small" data-text="jbl speaker, small fits in a bag. enough for a room, a porch, or a melave malka. music &amp; audio tech &amp; gadgets">
+<label class="tick"><input type="checkbox" data-tick="tech-jbl-speaker-small" aria-label="Mark JBL Speaker, Small as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="3"/><circle cx="12" cy="15" r="3"/><circle cx="12" cy="7.5" r="1"/></svg></div>
+<h3 class="name">JBL Speaker, Small</h3>
+<p class="desc">Fits in a bag. Enough for a room, a porch, or a Melave Malka.</p>
+<a class="go" href="https://amzn.to/4xnbEIq" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p60" data-group="tech-jbl-speaker-large" data-key="jbl-speaker-large" data-text="jbl speaker, large the one someone in the dorm should own. it may as well be you. music &amp; audio tech &amp; gadgets">
+<label class="tick"><input type="checkbox" data-tick="tech-jbl-speaker-large" aria-label="Mark JBL Speaker, Large as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="3" width="12" height="18" rx="3"/><circle cx="12" cy="15" r="3"/><circle cx="12" cy="7.5" r="1"/></svg></div>
+<h3 class="name">JBL Speaker, Large</h3>
+<p class="desc">The one someone in the dorm should own. It may as well be you.</p>
+<a class="go" href="https://amzn.to/4z2Tptz" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+<h4 class="subhead" data-sub>Power</h4><div class="grid"><article class="card" data-card="p61" data-group="tech-travel-adaptor" data-key="travel-adaptor" data-text="travel adaptor israel runs 230v on a type h socket, so nothing you own plugs in without one. pack it in your carry-on, not the hold. power tech &amp; gadgets">
+<label class="tick"><input type="checkbox" data-tick="tech-travel-adaptor" aria-label="Mark Travel Adaptor as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="15" height="10" rx="2.5"/><path d="M21 11v2"/><path d="M8 10v4"/></svg></div>
+<h3 class="name">Travel Adaptor</h3>
+<p class="desc">Israel runs 230V on a Type H socket, so nothing you own plugs in without one. Pack it in your carry-on, not the hold.</p>
+<a class="go" href="https://amzn.to/4fP0aYm" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p62" data-group="tech-portable-charger" data-key="portable-charger-option-a" data-text="portable charger long touring days, no outlet. pack one in your day bag from day one. power tech &amp; gadgets">
+<label class="tick"><input type="checkbox" data-tick="tech-portable-charger" aria-label="Mark Portable Charger as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="15" height="10" rx="2.5"/><path d="M21 11v2"/><path d="M8 10v4"/></svg></div>
+<h3 class="name">Portable Charger <span class="opt">Option A</span></h3>
+<p class="desc">Long touring days, no outlet. Pack one in your day bag from day one.</p>
+<a class="go" href="https://amzn.to/4bYRtZd" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p63" data-group="tech-portable-charger" data-key="portable-charger-option-b" data-text="portable charger different capacity. higher mah means more charges and more weight. power tech &amp; gadgets">
+<label class="tick"><input type="checkbox" data-tick="tech-portable-charger" aria-label="Mark Portable Charger as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="15" height="10" rx="2.5"/><path d="M21 11v2"/><path d="M8 10v4"/></svg></div>
+<h3 class="name">Portable Charger <span class="opt">Option B</span></h3>
+<p class="desc">Different capacity. Higher mAh means more charges and more weight.</p>
+<a class="go" href="https://amzn.to/4z7a7Yr" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p64" data-group="tech-portable-charger" data-key="portable-charger-option-c" data-text="portable charger a third option, if you want a slimmer profile. power tech &amp; gadgets">
+<label class="tick"><input type="checkbox" data-tick="tech-portable-charger" aria-label="Mark Portable Charger as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="15" height="10" rx="2.5"/><path d="M21 11v2"/><path d="M8 10v4"/></svg></div>
+<h3 class="name">Portable Charger <span class="opt">Option C</span></h3>
+<p class="desc">A third option, if you want a slimmer profile.</p>
+<a class="go" href="https://amzn.to/4q8P0kv" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+<h4 class="subhead" data-sub>Cameras</h4><div class="grid"><article class="card" data-card="p65" data-group="tech-canon-powershot-v10" data-key="canon-powershot-v10" data-text="canon powershot v10 built for filming yourself, with a flip-up screen and a stand that folds out. pocketable enough to actually carry. cameras tech &amp; gadgets">
+<label class="tick"><input type="checkbox" data-tick="tech-canon-powershot-v10" aria-label="Mark Canon PowerShot V10 as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="3"/><circle cx="12" cy="13.5" r="3.5"/><path d="M8 7l1.5-3h5L16 7"/></svg></div>
+<h3 class="name">Canon PowerShot V10</h3>
+<p class="desc">Built for filming yourself, with a flip-up screen and a stand that folds out. Pocketable enough to actually carry.</p>
+<a class="go" href="https://amzn.to/4xwdRkL" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p66" data-group="tech-camera" data-key="camera" data-text="camera a real camera means the year is not trapped on a phone you will replace. cameras tech &amp; gadgets">
+<label class="tick"><input type="checkbox" data-tick="tech-camera" aria-label="Mark Camera as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="3"/><circle cx="12" cy="13.5" r="3.5"/><path d="M8 7l1.5-3h5L16 7"/></svg></div>
+<h3 class="name">Camera</h3>
+<p class="desc">A real camera means the year is not trapped on a phone you will replace.</p>
+<a class="go" href="https://amzn.to/4qgpGZZ" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p67" data-group="tech-instant-print-camera" data-key="instant-print-camera-option-a" data-text="instant print camera prints on the spot. the fastest way to fill a dorm wall. cameras tech &amp; gadgets">
+<label class="tick"><input type="checkbox" data-tick="tech-instant-print-camera" aria-label="Mark Instant Print Camera as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="3"/><circle cx="12" cy="13.5" r="3.5"/><path d="M8 7l1.5-3h5L16 7"/></svg></div>
+<h3 class="name">Instant Print Camera <span class="opt">Option A</span></h3>
+<p class="desc">Prints on the spot. The fastest way to fill a dorm wall.</p>
+<a class="go" href="https://amzn.to/4hZ0p4g" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p68" data-group="tech-instant-print-camera" data-key="instant-print-camera-option-b" data-text="instant print camera second pick, with different film or print size. cameras tech &amp; gadgets">
+<label class="tick"><input type="checkbox" data-tick="tech-instant-print-camera" aria-label="Mark Instant Print Camera as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="3"/><circle cx="12" cy="13.5" r="3.5"/><path d="M8 7l1.5-3h5L16 7"/></svg></div>
+<h3 class="name">Instant Print Camera <span class="opt">Option B</span></h3>
+<p class="desc">Second pick, with different film or print size.</p>
+<a class="go" href="https://amzn.to/4wkQ9qL" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+</div>
+</details>
+<details class="sec" id="study" data-sec="study">
+<summary class="sec-head">
+<span class="sec-t"><span class="sec-h2">Study &amp; Stationery</span><span class="sec-b">The supplies that survive a full year of shiur notes and source sheets.</span></span>
+<span class="sec-n"><b data-secdone="study">0</b>/4</span>
+<span class="chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+</summary>
+<div class="sec-body">
+<div class="grid"><article class="card" data-card="p69" data-group="study-mechanical-pencils" data-key="mechanical-pencils-option-a" data-text="mechanical pencils for notes in the margins of a sefer, where pen would be a mistake.  study &amp; stationery">
+<label class="tick"><input type="checkbox" data-tick="study-mechanical-pencils" aria-label="Mark Mechanical Pencils as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21l2-6 10-10 3 3-10 10z"/><path d="M15 5l3 3"/></svg></div>
+<h3 class="name">Mechanical Pencils <span class="opt">Option A</span></h3>
+<p class="desc">For notes in the margins of a sefer, where pen would be a mistake.</p>
+<a class="go" href="https://amzn.to/4fOvpCT" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p70" data-group="study-mechanical-pencils" data-key="mechanical-pencils-option-b" data-text="mechanical pencils different lead weight. bring spare lead, it is harder to find there.  study &amp; stationery">
+<label class="tick"><input type="checkbox" data-tick="study-mechanical-pencils" aria-label="Mark Mechanical Pencils as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21l2-6 10-10 3 3-10 10z"/><path d="M15 5l3 3"/></svg></div>
+<h3 class="name">Mechanical Pencils <span class="opt">Option B</span></h3>
+<p class="desc">Different lead weight. Bring spare lead, it is harder to find there.</p>
+<a class="go" href="https://amzn.to/3U6oUTf" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p71" data-group="study-highlighters" data-key="highlighters" data-text="highlighters for source sheets. get a set with enough colours to build a real system.  study &amp; stationery">
+<label class="tick"><input type="checkbox" data-tick="study-highlighters" aria-label="Mark Highlighters as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21l2-6 10-10 3 3-10 10z"/><path d="M15 5l3 3"/></svg></div>
+<h3 class="name">Highlighters</h3>
+<p class="desc">For source sheets. Get a set with enough colours to build a real system.</p>
+<a class="go" href="https://amzn.to/4bCI5tX" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p72" data-group="study-sticky-tabs" data-key="sticky-tabs" data-text="sticky tabs mark a sugya without writing in the sefer. reusable and worth it.  study &amp; stationery">
+<label class="tick"><input type="checkbox" data-tick="study-sticky-tabs" aria-label="Mark Sticky Tabs as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h10l4 4v12H5z"/><path d="M15 4v4h4"/><path d="M8 12h7M8 16h5"/></svg></div>
+<h3 class="name">Sticky Tabs</h3>
+<p class="desc">Mark a sugya without writing in the sefer. Reusable and worth it.</p>
+<a class="go" href="https://amzn.to/4gjX9zg" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p73" data-group="study-sticky-notes" data-key="sticky-notes" data-text="sticky notes shiur notes, reminders, and the schedule taped inside your closet door.  study &amp; stationery">
+<label class="tick"><input type="checkbox" data-tick="study-sticky-notes" aria-label="Mark Sticky Notes as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h10l4 4v12H5z"/><path d="M15 4v4h4"/><path d="M8 12h7M8 16h5"/></svg></div>
+<h3 class="name">Sticky Notes</h3>
+<p class="desc">Shiur notes, reminders, and the schedule taped inside your closet door.</p>
+<a class="go" href="https://amzn.to/4zqpwnd" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+</div>
+</details>
+<details class="sec" id="books" data-sec="books">
+<summary class="sec-head">
+<span class="sec-t"><span class="sec-h2">Books</span><span class="sec-b">Worth the suitcase weight. Good for a quiet Shabbat afternoon or the questions that surface mid-year.</span></span>
+<span class="sec-n"><b data-secdone="books">0</b>/11</span>
+<span class="chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+</summary>
+<div class="sec-body">
+<div class="grid"><article class="card" data-card="p74" data-group="books-you-revealed" data-key="you-revealed" data-text="you revealed accessible and worth bringing. good for a quiet shabbat afternoon.  books">
+<label class="tick"><input type="checkbox" data-tick="books-you-revealed" aria-label="Mark You Revealed as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a2 2 0 012 2v14H7a2 2 0 01-2-2z"/><path d="M18 20H7"/></svg></div>
+<h3 class="name">You Revealed</h3>
+<p class="desc">Accessible and worth bringing. Good for a quiet Shabbat afternoon.</p>
+<a class="go" href="https://amzn.to/4g6Stvt" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p75" data-group="books-olam-hamiddos" data-key="olam-hamiddos" data-text="olam hamiddos on character and its refinement. a year in seminary is the right time for it.  books">
+<label class="tick"><input type="checkbox" data-tick="books-olam-hamiddos" aria-label="Mark Olam HaMiddos as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a2 2 0 012 2v14H7a2 2 0 01-2-2z"/><path d="M18 20H7"/></svg></div>
+<h3 class="name">Olam HaMiddos</h3>
+<p class="desc">On character and its refinement. A year in seminary is the right time for it.</p>
+<a class="go" href="https://amzn.to/4wm6z22" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p76" data-group="books-olam-haavodah" data-key="olam-haavodah" data-text="olam haavodah the companion volume to olam hamiddos, turning from character to avodah itself.  books">
+<label class="tick"><input type="checkbox" data-tick="books-olam-haavodah" aria-label="Mark Olam HaAvodah as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a2 2 0 012 2v14H7a2 2 0 01-2-2z"/><path d="M18 20H7"/></svg></div>
+<h3 class="name">Olam HaAvodah</h3>
+<p class="desc">The companion volume to Olam HaMiddos, turning from character to avodah itself.</p>
+<a class="go" href="https://amzn.to/4wLdhjb" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p77" data-group="books-mean-what-you-pray" data-key="mean-what-you-pray" data-text="mean what you pray on tefillah and paying attention to the words. a year of three-times-daily davening is the time for it.  books">
+<label class="tick"><input type="checkbox" data-tick="books-mean-what-you-pray" aria-label="Mark Mean What You Pray as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a2 2 0 012 2v14H7a2 2 0 01-2-2z"/><path d="M18 20H7"/></svg></div>
+<h3 class="name">Mean What You Pray</h3>
+<p class="desc">On tefillah and paying attention to the words. A year of three-times-daily davening is the time for it.</p>
+<a class="go" href="https://amzn.to/4fWIqZH" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p78" data-group="books-gates-of-prayer" data-key="gates-of-prayer" data-text="gates of prayer a second way into tefillah, alongside mean what you pray. take whichever voice speaks to you.  books">
+<label class="tick"><input type="checkbox" data-tick="books-gates-of-prayer" aria-label="Mark Gates of Prayer as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a2 2 0 012 2v14H7a2 2 0 01-2-2z"/><path d="M18 20H7"/></svg></div>
+<h3 class="name">Gates of Prayer</h3>
+<p class="desc">A second way into tefillah, alongside Mean What You Pray. Take whichever voice speaks to you.</p>
+<a class="go" href="https://amzn.to/4xzyyMU" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p79" data-group="books-chofetz-chaim-a-lesson-a-day" data-key="chofetz-chaim-a-lesson-a-day" data-text="chofetz chaim: a lesson a day shmiras halashon in daily portions. built for a year where you are living at close quarters with forty other girls.  books">
+<label class="tick"><input type="checkbox" data-tick="books-chofetz-chaim-a-lesson-a-day" aria-label="Mark Chofetz Chaim: A Lesson A Day as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a2 2 0 012 2v14H7a2 2 0 01-2-2z"/><path d="M18 20H7"/></svg></div>
+<h3 class="name">Chofetz Chaim: A Lesson A Day</h3>
+<p class="desc">Shmiras halashon in daily portions. Built for a year where you are living at close quarters with forty other girls.</p>
+<a class="go" href="https://amzn.to/4cxTqf9" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p80" data-group="books-ka-asher-tziva-hashem" data-key="ka-asher-tziva-hashem" data-text="ka’asher tziva hashem why we do what we do: because hashem commanded it. a steadying answer for a year full of questions.  books">
+<label class="tick"><input type="checkbox" data-tick="books-ka-asher-tziva-hashem" aria-label="Mark Ka’asher Tziva Hashem as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a2 2 0 012 2v14H7a2 2 0 01-2-2z"/><path d="M18 20H7"/></svg></div>
+<h3 class="name">Ka’asher Tziva Hashem</h3>
+<p class="desc">Why we do what we do: because Hashem commanded it. A steadying answer for a year full of questions.</p>
+<a class="go" href="https://amzn.to/4fWIIQh" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p81" data-group="books-living-inspired" data-key="living-inspired" data-text="living inspired short essays that make torah ideas land. easy to pick up between sedarim and hard to put down.  books">
+<label class="tick"><input type="checkbox" data-tick="books-living-inspired" aria-label="Mark Living Inspired as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a2 2 0 012 2v14H7a2 2 0 01-2-2z"/><path d="M18 20H7"/></svg></div>
+<h3 class="name">Living Inspired</h3>
+<p class="desc">Short essays that make Torah ideas land. Easy to pick up between sedarim and hard to put down.</p>
+<a class="go" href="https://amzn.to/3S4Oac2" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p82" data-group="books-reclaiming-dignity" data-key="reclaiming-dignity" data-text="reclaiming dignity tznius approached through meaning rather than rules, pairing womens essays with serious halachic treatment.  books">
+<label class="tick"><input type="checkbox" data-tick="books-reclaiming-dignity" aria-label="Mark Reclaiming Dignity as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a2 2 0 012 2v14H7a2 2 0 01-2-2z"/><path d="M18 20H7"/></svg></div>
+<h3 class="name">Reclaiming Dignity</h3>
+<p class="desc">Tznius approached through meaning rather than rules, pairing womens essays with serious halachic treatment.</p>
+<a class="go" href="https://amzn.to/3RWh6mz" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p83" data-group="books-emunah-in-reality" data-key="emunah-in-reality" data-text="emunah in reality for the questions that surface when you are learning full time and far from home.  books">
+<label class="tick"><input type="checkbox" data-tick="books-emunah-in-reality" aria-label="Mark Emunah in Reality as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a2 2 0 012 2v14H7a2 2 0 01-2-2z"/><path d="M18 20H7"/></svg></div>
+<h3 class="name">Emunah in Reality</h3>
+<p class="desc">For the questions that surface when you are learning full time and far from home.</p>
+<a class="go" href="https://amzn.to/45PxGHX" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p84" data-group="books-attached" data-key="attached" data-text="attached on attachment styles and why people relate to each other the way they do. useful reading for the year ahead.  books">
+<label class="tick"><input type="checkbox" data-tick="books-attached" aria-label="Mark Attached as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h11a2 2 0 012 2v14H7a2 2 0 01-2-2z"/><path d="M18 20H7"/></svg></div>
+<h3 class="name">Attached</h3>
+<p class="desc">On attachment styles and why people relate to each other the way they do. Useful reading for the year ahead.</p>
+<a class="go" href="https://amzn.to/4zcTTxe" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+</div>
+</details>
+<details class="sec" id="go" data-sec="go">
+<summary class="sec-head">
+<span class="sec-t"><span class="sec-h2">On the Go</span><span class="sec-b">Shabbatonim, Bein Hazmanim, and every trip in between.</span></span>
+<span class="sec-n"><b data-secdone="go">0</b>/9</span>
+<span class="chev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></span>
+</summary>
+<div class="sec-body">
+<div class="grid"><article class="card" data-card="p85" data-group="go-packing-cubes" data-key="packing-cubes-option-a" data-text="packing cubes the difference between unpacking in twenty minutes and living out of a suitcase.  on the go">
+<label class="tick"><input type="checkbox" data-tick="go-packing-cubes" aria-label="Mark Packing Cubes as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8-4 8 4v8l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v8"/></svg></div>
+<h3 class="name">Packing Cubes <span class="opt">Option A</span></h3>
+<p class="desc">The difference between unpacking in twenty minutes and living out of a suitcase.</p>
+<a class="go" href="https://amzn.to/4wLntYT" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p86" data-group="go-packing-cubes" data-key="packing-cubes-option-b" data-text="packing cubes different set size. compression cubes buy you room for the trip home.  on the go">
+<label class="tick"><input type="checkbox" data-tick="go-packing-cubes" aria-label="Mark Packing Cubes as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8-4 8 4v8l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v8"/></svg></div>
+<h3 class="name">Packing Cubes <span class="opt">Option B</span></h3>
+<p class="desc">Different set size. Compression cubes buy you room for the trip home.</p>
+<a class="go" href="https://amzn.to/4fVVbnm" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p87" data-group="go-carry-on-suitcase" data-key="carry-on-suitcase" data-text="carry-on suitcase sized for a shabbaton: enough for a weekend, small enough to carry up a flight of stairs and stash under a bed.  on the go">
+<label class="tick"><input type="checkbox" data-tick="go-carry-on-suitcase" aria-label="Mark Carry-On Suitcase as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8-4 8 4v8l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v8"/></svg></div>
+<h3 class="name">Carry-On Suitcase</h3>
+<p class="desc">Sized for a Shabbaton: enough for a weekend, small enough to carry up a flight of stairs and stash under a bed.</p>
+<a class="go" href="https://amzn.to/4wkv7IO" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p88" data-group="go-stick-on-phone-wallet" data-key="stick-on-phone-wallet" data-text="stick-on phone wallet card and cash on the back of your phone, so a quick trip out needs one thing in your hand instead of three.  on the go">
+<label class="tick"><input type="checkbox" data-tick="go-stick-on-phone-wallet" aria-label="Mark Stick-On Phone Wallet as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M10.5 5.5h3"/><rect x="9" y="11" width="6" height="5" rx="1"/></svg></div>
+<h3 class="name">Stick-On Phone Wallet</h3>
+<p class="desc">Card and cash on the back of your phone, so a quick trip out needs one thing in your hand instead of three.</p>
+<a class="go" href="https://amzn.to/4wTXvTh" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p89" data-group="go-toiletry-makeup-bag" data-key="toiletry-makeup-bag" data-text="toiletry &amp; makeup bag hangs on a hook so it works in a bathroom with no counter space. packs for a shabbaton in one grab.  on the go">
+<label class="tick"><input type="checkbox" data-tick="go-toiletry-makeup-bag" aria-label="Mark Toiletry &amp; Makeup Bag as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M9 10V7a3 3 0 016 0v3"/></svg></div>
+<h3 class="name">Toiletry &amp; Makeup Bag</h3>
+<p class="desc">Hangs on a hook so it works in a bathroom with no counter space. Packs for a Shabbaton in one grab.</p>
+<a class="go" href="https://amzn.to/4q6fFOZ" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p90" data-group="go-travel-size-mouthwash" data-key="travel-size-mouthwash" data-text="travel-size mouthwash under the liquid limit for a carry-on, and small enough to live in the toiletry bag all year.  on the go">
+<label class="tick"><input type="checkbox" data-tick="go-travel-size-mouthwash" aria-label="Mark Travel-Size Mouthwash as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4v3l2 3v12H8V9l2-3z"/><path d="M8 13h8"/></svg></div>
+<h3 class="name">Travel-Size Mouthwash</h3>
+<p class="desc">Under the liquid limit for a carry-on, and small enough to live in the toiletry bag all year.</p>
+<a class="go" href="https://amzn.to/45MGfTU" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p91" data-group="go-travel-size-shampoo-set" data-key="travel-size-shampoo-set-option-a" data-text="travel-size shampoo set refillable bottles for shabbatonim, so you are not packing full-size every week.  on the go">
+<label class="tick"><input type="checkbox" data-tick="go-travel-size-shampoo-set" aria-label="Mark Travel-Size Shampoo Set as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M9 10V7a3 3 0 016 0v3"/></svg></div>
+<h3 class="name">Travel-Size Shampoo Set <span class="opt">Option A</span></h3>
+<p class="desc">Refillable bottles for Shabbatonim, so you are not packing full-size every week.</p>
+<a class="go" href="https://amzn.to/4z95Tzw" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p92" data-group="go-travel-size-shampoo-set" data-key="travel-size-shampoo-set-option-b" data-text="travel-size shampoo set second pick, in a different bottle style.  on the go">
+<label class="tick"><input type="checkbox" data-tick="go-travel-size-shampoo-set" aria-label="Mark Travel-Size Shampoo Set as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="3"/><path d="M9 10V7a3 3 0 016 0v3"/></svg></div>
+<h3 class="name">Travel-Size Shampoo Set <span class="opt">Option B</span></h3>
+<p class="desc">Second pick, in a different bottle style.</p>
+<a class="go" href="https://amzn.to/4fXkzup" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p93" data-group="go-flashlight" data-key="flashlight" data-text="flashlight night tiyulim, caves, and stairwells where the hall light is on a timer that always runs out.  on the go">
+<label class="tick"><input type="checkbox" data-tick="go-flashlight" aria-label="Mark Flashlight as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8l3 8H5z"/><path d="M12 11v8"/><path d="M8 21h8"/></svg></div>
+<h3 class="name">Flashlight</h3>
+<p class="desc">Night tiyulim, caves, and stairwells where the hall light is on a timer that always runs out.</p>
+<a class="go" href="https://amzn.to/4hY3amr" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p94" data-group="go-owala-water-bottle" data-key="owala-water-bottle" data-text="owala water bottle israel is hot and you will walk more than you have ever walked. carry water.  on the go">
+<label class="tick"><input type="checkbox" data-tick="go-owala-water-bottle" aria-label="Mark Owala Water Bottle as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4v3l2 3v12H8V9l2-3z"/><path d="M8 13h8"/></svg></div>
+<h3 class="name">Owala Water Bottle</h3>
+<p class="desc">Israel is hot and you will walk more than you have ever walked. Carry water.</p>
+<a class="go" href="https://amzn.to/4hZ8aHv" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p95" data-group="go-stanley-tumbler" data-key="stanley-tumbler-option-a" data-text="stanley tumbler holds ice for a full touring day, which matters more than it sounds.  on the go">
+<label class="tick"><input type="checkbox" data-tick="go-stanley-tumbler" aria-label="Mark Stanley Tumbler as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4v3l2 3v12H8V9l2-3z"/><path d="M8 13h8"/></svg></div>
+<h3 class="name">Stanley Tumbler <span class="opt">Option A</span></h3>
+<p class="desc">Holds ice for a full touring day, which matters more than it sounds.</p>
+<a class="go" href="https://amzn.to/3THrZJv" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article>
+<article class="card" data-card="p96" data-group="go-stanley-tumbler" data-key="stanley-tumbler-option-b" data-text="stanley tumbler different size or colour.  on the go">
+<label class="tick"><input type="checkbox" data-tick="go-stanley-tumbler" aria-label="Mark Stanley Tumbler as packed"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5L20 6"/></svg></label>
+<div class="slot"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 3h4v3l2 3v12H8V9l2-3z"/><path d="M8 13h8"/></svg></div>
+<h3 class="name">Stanley Tumbler <span class="opt">Option B</span></h3>
+<p class="desc">Different size or colour.</p>
+<a class="go" href="https://amzn.to/4xwnqjK" target="_blank" rel="nofollow sponsored noopener">View on Amazon <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+</article></div>
+</div>
+</details>
+<div class="empty" id="empty" hidden>
+<p><strong>Nothing matches that.</strong></p>
+<p>Try a shorter word, or clear the search to see all 72 items.</p>
+</div>
+<p class="note">As an Amazon Associate, this site earns from qualifying purchases. Prices and availability are set by Amazon and can change at any time.</p>
+</div>
+</main>
+
+<footer>
+<div class="wrap foot-in">
+<div>
+<a class="brand" href="#top">The Seminary <span>List</span></a>
+<p style="margin-top:10px">A packing list you can actually shop. Built for the weeks before the flight.</p>
+</div>
+<div>
+<p><strong style="color:var(--ink)">Affiliate disclosure</strong><br>This site participates in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by linking to Amazon.com. Clicking a link costs you nothing extra.</p>
+<p style="font-family:'JetBrains Mono',monospace;font-size:12px">&copy; <span id="yr">2026</span> The Seminary List · build v3</p>
+</div>
+</div>
+</footer>
+
+<script>
+/* ===========================================================
+   PRODUCT PHOTOS  --  paste image URLs between the quote marks.
+   Leave one blank and that card keeps its icon. Nothing else
+   in this file needs to change.
+   =========================================================== */
+var IMAGES = {
+  "shabbat-lamp": "",
+  "lighted-vanity-mirror-option-a": "",
+  "lighted-vanity-mirror-option-b": "",
+  "linen-set-option-a": "",
+  "linen-set-option-b": "",
+  "egg-crate-mattress-topper-option-a": "",
+  "egg-crate-mattress-topper-option-b": "",
+  "egg-crate-mattress-topper-option-c": "",
+  "sleep-sack-option-a": "",
+  "sleep-sack-option-b": "",
+  "sleep-mask": "",
+  "white-noise-machine-option-a": "",
+  "white-noise-machine-option-b": "",
+  "white-noise-machine-option-c": "",
+  "portable-fan-option-a": "",
+  "portable-fan-option-b": "",
+  "alarm-clock-option-a": "",
+  "alarm-clock-option-b": "",
+  "organizer-bins-option-a": "",
+  "organizer-bins-option-b": "",
+  "stick-on-hooks-option-a": "",
+  "stick-on-hooks-option-b": "",
+  "stick-on-hooks-option-c": "",
+  "clothes-drying-rack-option-a": "",
+  "clothes-drying-rack-option-b": "",
+  "foldable-drying-rack": "",
+  "small-hamper-option-a": "",
+  "small-hamper-option-b": "",
+  "over-door-shoe-rack-option-a": "",
+  "over-door-shoe-rack-option-b": "",
+  "downy-unstopables": "",
+  "tide-pods": "",
+  "downy-scent-booster-beads": "",
+  "dryer-sheets": "",
+  "mesh-laundry-bags": "",
+  "tide-to-go-pen": "",
+  "shower-caddy-option-a": "",
+  "shower-caddy-option-b": "",
+  "toothbrush-travel-case": "",
+  "toothbrush-covers": "",
+  "deodorant-4-pack": "",
+  "hair-ties-100-pack": "",
+  "cotton-rounds-q-tips": "",
+  "dae-styling-stick": "",
+  "makeup-remover-wipes": "",
+  "mini-makeup-removers": "",
+  "advil": "",
+  "nyquil-dayquil": "",
+  "benadryl": "",
+  "nike-crew-socks": "",
+  "adidas-crew-socks": "",
+  "striped-crew-socks": "",
+  "native-water-shoes": "",
+  "fashion-tape": "",
+  "body-glove-option-a": "",
+  "body-glove-option-b": "",
+  "24-6-media-player": "",
+  "innioasis-mp3-player-option-a": "",
+  "innioasis-mp3-player-option-b": "",
+  "jbl-speaker-small": "",
+  "jbl-speaker-large": "",
+  "travel-adaptor": "",
+  "portable-charger-option-a": "",
+  "portable-charger-option-b": "",
+  "portable-charger-option-c": "",
+  "canon-powershot-v10": "",
+  "camera": "",
+  "instant-print-camera-option-a": "",
+  "instant-print-camera-option-b": "",
+  "mechanical-pencils-option-a": "",
+  "mechanical-pencils-option-b": "",
+  "highlighters": "",
+  "sticky-tabs": "",
+  "sticky-notes": "",
+  "you-revealed": "",
+  "olam-hamiddos": "",
+  "olam-haavodah": "",
+  "mean-what-you-pray": "",
+  "gates-of-prayer": "",
+  "chofetz-chaim-a-lesson-a-day": "",
+  "ka-asher-tziva-hashem": "",
+  "living-inspired": "",
+  "reclaiming-dignity": "",
+  "emunah-in-reality": "",
+  "attached": "",
+  "packing-cubes-option-a": "",
+  "packing-cubes-option-b": "",
+  "carry-on-suitcase": "",
+  "stick-on-phone-wallet": "",
+  "toiletry-makeup-bag": "",
+  "travel-size-mouthwash": "",
+  "travel-size-shampoo-set-option-a": "",
+  "travel-size-shampoo-set-option-b": "",
+  "flashlight": "",
+  "owala-water-bottle": "",
+  "stanley-tumbler-option-a": "",
+  "stanley-tumbler-option-b": "",
+};
+/* ======================= end photos ======================== */
+
+(function(){
+"use strict";
+var KEY="seminary-list-v2", mem=null;
+function load(){try{var v=localStorage.getItem(KEY);if(v){var p=JSON.parse(v);if(p&&p.length!==undefined)return p}}catch(e){}return mem||[]}
+function save(a){mem=a;try{localStorage.setItem(KEY,JSON.stringify(a))}catch(e){}}
+function toArr(set){var a=[];set.forEach(function(v){a.push(v)});return a}
+
+var checked=new Set(load());
+var cards=[].slice.call(document.querySelectorAll("[data-card]"));
+var secs=[].slice.call(document.querySelectorAll("[data-sec]"));
+var pips=[].slice.call(document.querySelectorAll("[data-pip]"));
+var total=pips.length;
+
+// reveal controls that only work with JS running
+[].forEach.call(document.querySelectorAll(".js-only"),function(el){el.style.display=""});
+document.getElementById("yr").textContent=new Date().getFullYear();
+
+function paint(){
+  var n=checked.size;
+  document.getElementById("tallyN").textContent=n;
+  document.getElementById("capDone").textContent=n+" packed";
+  document.getElementById("capLeft").textContent=(total-n)+" to go";
+  cards.forEach(function(c){
+    var on=checked.has(c.getAttribute("data-group"));
+    c.classList.toggle("done",on);
+    var lab=c.querySelector(".tick");
+    if(lab)lab.classList.toggle("on",on);
+    var inp=c.querySelector("[data-tick]");
+    if(inp&&inp.checked!==on)inp.checked=on;
+  });
+  pips.forEach(function(p){
+    p.classList.toggle("on",checked.has(p.getAttribute("data-pip")));
+  });
+  secs.forEach(function(s){
+    var hit={};
+    [].forEach.call(s.querySelectorAll("[data-card]"),function(c){
+      var g=c.getAttribute("data-group");if(checked.has(g))hit[g]=1;
+    });
+    var b=s.querySelector("[data-secdone]");
+    if(b)b.textContent=Object.keys(hit).length;
+  });
+}
+
+var ticks=[].slice.call(document.querySelectorAll("[data-tick]"));
+ticks.forEach(function(inp){
+  inp.addEventListener("change",function(){
+    var id=inp.getAttribute("data-tick");
+    if(inp.checked){checked.add(id)}else{checked.delete(id)}
+    paint();save(toArr(checked));
+  });
+});
+[].forEach.call(document.querySelectorAll("[data-jump]"),function(a){
+  a.addEventListener("click",function(){
+    var sec=document.getElementById(a.getAttribute("data-jump"));
+    if(sec)sec.open=true;
+  });
+});
+
+document.getElementById("reset").addEventListener("click",function(){
+  checked.clear();paint();save([]);
+});
+document.getElementById("openAll").addEventListener("click",function(){
+  secs.forEach(function(s){s.open=true});
+});
+document.getElementById("shutAll").addEventListener("click",function(){
+  secs.forEach(function(s){s.open=false});
+});
+
+var prevOpen=null;
+document.getElementById("q").addEventListener("input",function(e){
+  var q=e.target.value.trim().toLowerCase();
+  if(q&&prevOpen===null)prevOpen=secs.map(function(s){return s.open});
+  var hits=0;
+  cards.forEach(function(c){
+    var show=!q||c.dataset.text.indexOf(q)>-1;
+    c.hidden=!show;if(show)hits++;
+  });
+  [].forEach.call(document.querySelectorAll(".grid"),function(g){
+    g.hidden=![].slice.call(g.children).some(function(c){return !c.hidden});
+  });
+  [].forEach.call(document.querySelectorAll("[data-sub]"),function(h){
+    h.hidden=h.nextElementSibling.hidden;
+  });
+  secs.forEach(function(s){
+    var any=[].slice.call(s.querySelectorAll("[data-card]")).some(function(c){return !c.hidden});
+    s.hidden=!any;
+    if(q)s.open=any;
+  });
+  if(!q&&prevOpen){secs.forEach(function(s,i){s.open=prevOpen[i]});prevOpen=null;}
+  document.getElementById("empty").hidden=hits>0;
+});
+
+cards.forEach(function(c){
+  var src=IMAGES[c.dataset.key];
+  if(src&&src.trim()){
+    var slot=c.querySelector(".slot");
+    var im=document.createElement("img");
+    im.src=src.trim();im.alt=c.querySelector(".name").textContent;im.loading="lazy";
+    im.onerror=function(){im.remove()};
+    slot.innerHTML="";slot.appendChild(im);
+  }
+});
+
+paint();
+})();
+</script>
+</body>
+</html>
