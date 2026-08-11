@@ -27,17 +27,19 @@ a{color:inherit}
 .bar-in{display:flex;align-items:center;gap:18px;min-height:64px;flex-wrap:wrap;padding:10px 0}
 .brand{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:19px;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}
 .brand span{color:var(--pine)}
-.search{position:relative;flex:1 1 220px;max-width:380px;margin-left:auto}
-.search input{width:100%;height:38px;padding:0 14px 0 36px;border-radius:999px;border:1px solid var(--stone-deep);background:#fff;font:inherit;font-size:14.5px;color:var(--ink)}
-.search input::placeholder{color:#9A948A}
-.search input:focus-visible{outline:2px solid var(--pine);outline-offset:1px;border-color:transparent}
-.search svg{position:absolute;left:13px;top:11px;width:16px;height:16px;stroke:#9A948A;fill:none;stroke-width:1.8}
 .tally{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--muted);white-space:nowrap;display:flex;align-items:center;gap:8px}
 .tally b{color:var(--pine);font-weight:500}
 .btn{border:1px solid var(--stone-deep);background:#fff;border-radius:999px;font:inherit;font-size:12.5px;color:var(--muted);padding:5px 12px;cursor:pointer;white-space:nowrap}
 .btn:hover{border-color:var(--pine);color:var(--pine)}
 .btn:focus-visible{outline:2px solid var(--pine);outline-offset:2px}
 .js-only{display:none}
+.search{position:relative;flex:1 1 220px;max-width:380px;margin-left:auto}
+.search input{width:100%;height:38px;padding:0 14px 0 36px;border-radius:999px;border:1px solid var(--stone-deep);background:#fff;font:inherit;font-size:16px;color:var(--ink);-webkit-appearance:none;appearance:none}
+.search input::placeholder{color:#9A948A}
+.search input:focus-visible{outline:2px solid var(--pine);outline-offset:1px;border-color:transparent}
+.search svg{position:absolute;left:13px;top:11px;width:16px;height:16px;stroke:#9A948A;fill:none;stroke-width:1.8;pointer-events:none}
+.empty{padding:64px 0;text-align:center;color:var(--muted)}
+.empty[hidden]{display:none}
 
 .hero{padding:44px 0 30px;border-bottom:1px solid var(--stone)}
 .hero-wrap{display:grid;grid-template-columns:1fr;gap:26px;align-items:end}
@@ -110,8 +112,6 @@ h1 em{font-style:italic;font-weight:400;color:var(--pine)}
 .go svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2;transition:transform .18s}
 .go:hover svg{transform:translateX(3px)}
 
-.empty{padding:64px 0;text-align:center;color:var(--muted)}
-.empty[hidden]{display:none}
 .note{font-size:13px;color:var(--muted);border-left:2px solid var(--brass);padding:2px 0 2px 14px;margin:56px 0 0;max-width:60ch}
 footer{margin-top:72px;border-top:1px solid var(--stone);padding:44px 0 64px}
 .foot-in{display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between}
@@ -119,6 +119,7 @@ footer p{margin:0 0 10px;font-size:14px;color:var(--muted);max-width:52ch}
 footer .brand{font-size:17px}
 
 @media (max-width:720px){
+.search{order:3;flex-basis:100%;max-width:none;margin-left:0}
 .hero{padding:14px 0 12px}
 .hero-wrap{gap:10px}
 .hero-meter{display:none}
@@ -128,7 +129,6 @@ h1{font-size:26px;margin:0;max-width:20ch}
 .cats{padding:10px 0 4px}
 .cats-row{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
 .cats-row::-webkit-scrollbar{display:none}
-.search{order:3;flex-basis:100%;max-width:none;margin-left:0}
 .tally{margin-left:auto}
 .grid{grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:10px}
 .card{padding:13px}
@@ -148,7 +148,7 @@ h1{font-size:26px;margin:0;max-width:20ch}
 <a class="brand" href="#top">The Seminary <span>List</span></a>
 <div class="search">
 <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-<input id="q" type="search" placeholder="Search 72 items — socks, egg crate, Advil…" aria-label="Search the list">
+<input id="q" type="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search 72 items" aria-label="Search the list">
 </div>
 <div class="tally"><span><b id="tallyN">0</b> / 72 packed</span><button class="btn js-only" id="reset" type="button">Clear</button></div>
 </div>
@@ -958,11 +958,15 @@ h1{font-size:26px;margin:0;max-width:20ch}
 <div class="wrap foot-in">
 <div>
 <a class="brand" href="#top">The Seminary <span>List</span></a>
+<div class="search">
+<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+<input id="q" type="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search 72 items" aria-label="Search the list">
+</div>
 <p style="margin-top:10px">A packing list you can actually shop. Built for the weeks before the flight.</p>
 </div>
 <div>
 <p><strong style="color:var(--ink)">Affiliate disclosure</strong><br>This site participates in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by linking to Amazon.com. Clicking a link costs you nothing extra.</p>
-<p style="font-family:'JetBrains Mono',monospace;font-size:12px">&copy; <span id="yr">2026</span> The Seminary List · build v8</p>
+<p style="font-family:'JetBrains Mono',monospace;font-size:12px">&copy; <span id="yr">2026</span> The Seminary List · build v10</p>
 </div>
 </div>
 </footer>
@@ -1143,12 +1147,16 @@ document.getElementById("shutAll").addEventListener("click",function(){
 });
 
 var prevOpen=null;
-document.getElementById("q").addEventListener("input",function(e){
-  var q=e.target.value.trim().toLowerCase();
+var qEl=document.getElementById("q");
+function norm(t){return (t||"").toLowerCase().replace(/[^a-z0-9 ]+/g," ").replace(/s+/g," ").trim()}
+function runSearch(){
+  var q=norm(qEl.value);
+  var words=q?q.split(" "):[];
   if(q&&prevOpen===null)prevOpen=secs.map(function(s){return s.open});
   var hits=0;
   cards.forEach(function(c){
-    var show=!q||c.dataset.text.indexOf(q)>-1;
+    var hay=norm(c.dataset.text);
+    var show=!words.length||words.every(function(w){return hay.indexOf(w)>-1});
     c.hidden=!show;if(show)hits++;
   });
   [].forEach.call(document.querySelectorAll(".grid"),function(g){
@@ -1164,7 +1172,11 @@ document.getElementById("q").addEventListener("input",function(e){
   });
   if(!q&&prevOpen){secs.forEach(function(s,i){s.open=prevOpen[i]});prevOpen=null;}
   document.getElementById("empty").hidden=hits>0;
-});
+}
+qEl.addEventListener("input",runSearch);
+qEl.addEventListener("search",runSearch);
+qEl.addEventListener("keyup",runSearch);
+qEl.addEventListener("keydown",function(e){if(e.key==="Escape"){qEl.value="";runSearch();qEl.blur()}});
 
 cards.forEach(function(c){
   var src=IMAGES[c.dataset.key];
