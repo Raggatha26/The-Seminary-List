@@ -39,18 +39,22 @@ a{color:inherit}
 .btn:focus-visible{outline:2px solid var(--pine);outline-offset:2px}
 .js-only{display:none}
 
-.hero{padding:72px 0 44px;border-bottom:1px solid var(--stone)}
-.eyebrow{font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 22px}
-h1{font-family:"Fraunces",Georgia,serif;font-weight:300;font-size:clamp(38px,6.2vw,66px);line-height:1.04;letter-spacing:-.035em;margin:0 0 20px;max-width:14ch}
+.hero{padding:44px 0 30px;border-bottom:1px solid var(--stone)}
+.hero-wrap{display:grid;grid-template-columns:1fr;gap:26px;align-items:end}
+@media (min-width:1000px) and (max-width:1099px){.hero-wrap{grid-template-columns:minmax(0,1fr) 300px;gap:56px}.hero-meter{padding-bottom:6px}}
+@media (min-width:1100px){body{padding-right:136px}#rail{position:fixed;top:0;right:0;bottom:0;width:136px;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px;border-left:1px solid var(--stone);background:var(--paper);z-index:20;overflow-y:auto}#rail .meter-grid{max-width:104px;justify-content:center;gap:5px}#rail .meter-cap{text-align:center;line-height:1.55;margin:14px 0 0}#rail .meter-cap b{display:block}#rail:before{content:"Packed";font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass);margin:0 0 14px}}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);margin:0 0 14px}
+h1{font-family:"Fraunces",Georgia,serif;font-weight:300;font-size:clamp(31px,5.4vw,58px);line-height:1.05;letter-spacing:-.035em;margin:0 0 14px;max-width:14ch}
 h1 em{font-style:italic;font-weight:400;color:var(--pine)}
-.lede{font-size:17.5px;color:var(--muted);max-width:46ch;margin:0 0 40px}
+.lede{font-size:16.5px;color:var(--muted);max-width:46ch;margin:0}
 .meter-grid{display:flex;flex-wrap:wrap;gap:5px;max-width:660px}
+.hero-meter{min-width:0}
 .pip{width:13px;height:13px;border-radius:3px;background:var(--stone-deep);transition:background .35s ease,transform .35s cubic-bezier(.2,.9,.3,1.4)}
 .pip.on{background:var(--brass);transform:scale(1.14)}
-.meter-cap{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--muted);margin:16px 0 0}
+.meter-cap{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--muted);margin:12px 0 0}
 .meter-cap b{color:var(--ink);font-weight:500}
 
-.cats{padding:32px 0 4px}
+.cats{padding:18px 0 4px}
 .cats-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .chip{display:inline-flex;align-items:baseline;gap:8px;text-decoration:none;border:1px solid var(--stone-deep);border-radius:999px;padding:8px 15px;font-size:14.5px;font-weight:500;background:#fff;transition:.18s}
 .chip u{font-family:"JetBrains Mono",monospace;font-size:11.5px;color:var(--muted);text-decoration:none}
@@ -115,7 +119,15 @@ footer p{margin:0 0 10px;font-size:14px;color:var(--muted);max-width:52ch}
 footer .brand{font-size:17px}
 
 @media (max-width:720px){
-.hero{padding:48px 0 34px}
+.hero{padding:14px 0 12px}
+.hero-wrap{gap:10px}
+.hero-meter{display:none}
+.lede{display:none}
+.eyebrow{margin:0 0 8px;font-size:10.5px}
+h1{font-size:26px;margin:0;max-width:20ch}
+.cats{padding:10px 0 4px}
+.cats-row{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:2px}
+.cats-row::-webkit-scrollbar{display:none}
 .search{order:3;flex-basis:100%;max-width:none;margin-left:0}
 .tally{margin-left:auto}
 .grid{grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:10px}
@@ -145,12 +157,16 @@ footer .brand{font-size:17px}
 <main>
 
 <section class="hero">
-<div class="wrap">
+<div class="wrap hero-wrap">
+<div class="hero-copy">
 <p class="eyebrow">Seminary packing list · 72 items · 9 categories</p>
 <h1>Everything you need for <em>the year.</em></h1>
-<p class="lede">One list, checked off as you go. Every item links straight to Amazon, so you can shop the whole thing in an afternoon instead of six browser tabs and a group chat.</p>
+<p class="lede">One list, checked off as you go. Every item links straight to Amazon.</p>
+</div>
+<div class="hero-meter" id="rail">
 <div class="meter-grid" id="meter" aria-hidden="true"><i class="pip" data-pip="dorm-shabbat-lamp"></i><i class="pip" data-pip="dorm-lighted-vanity-mirror"></i><i class="pip" data-pip="dorm-linen-set"></i><i class="pip" data-pip="dorm-egg-crate-mattress-topper"></i><i class="pip" data-pip="dorm-sleep-sack"></i><i class="pip" data-pip="dorm-sleep-mask"></i><i class="pip" data-pip="dorm-white-noise-machine"></i><i class="pip" data-pip="dorm-portable-fan"></i><i class="pip" data-pip="dorm-alarm-clock"></i><i class="pip" data-pip="store-organizer-bins"></i><i class="pip" data-pip="store-stick-on-hooks"></i><i class="pip" data-pip="store-clothes-drying-rack"></i><i class="pip" data-pip="store-foldable-drying-rack"></i><i class="pip" data-pip="store-small-hamper"></i><i class="pip" data-pip="store-over-door-shoe-rack"></i><i class="pip" data-pip="laundry-downy-unstopables"></i><i class="pip" data-pip="laundry-tide-pods"></i><i class="pip" data-pip="laundry-downy-scent-booster-beads"></i><i class="pip" data-pip="laundry-dryer-sheets"></i><i class="pip" data-pip="laundry-mesh-laundry-bags"></i><i class="pip" data-pip="laundry-tide-to-go-pen"></i><i class="pip" data-pip="care-shower-caddy"></i><i class="pip" data-pip="care-toothbrush-travel-case"></i><i class="pip" data-pip="care-toothbrush-covers"></i><i class="pip" data-pip="care-deodorant-4-pack"></i><i class="pip" data-pip="care-hair-ties-100-pack"></i><i class="pip" data-pip="care-cotton-rounds-q-tips"></i><i class="pip" data-pip="care-dae-styling-stick"></i><i class="pip" data-pip="care-makeup-remover-wipes"></i><i class="pip" data-pip="care-mini-makeup-removers"></i><i class="pip" data-pip="care-advil"></i><i class="pip" data-pip="care-nyquil-dayquil"></i><i class="pip" data-pip="care-benadryl"></i><i class="pip" data-pip="clothes-nike-crew-socks"></i><i class="pip" data-pip="clothes-adidas-crew-socks"></i><i class="pip" data-pip="clothes-striped-crew-socks"></i><i class="pip" data-pip="clothes-native-water-shoes"></i><i class="pip" data-pip="clothes-fashion-tape"></i><i class="pip" data-pip="clothes-body-glove"></i><i class="pip" data-pip="tech-24-6-media-player"></i><i class="pip" data-pip="tech-innioasis-mp3-player"></i><i class="pip" data-pip="tech-jbl-speaker-small"></i><i class="pip" data-pip="tech-jbl-speaker-large"></i><i class="pip" data-pip="tech-travel-adaptor"></i><i class="pip" data-pip="tech-portable-charger"></i><i class="pip" data-pip="tech-canon-powershot-v10"></i><i class="pip" data-pip="tech-camera"></i><i class="pip" data-pip="tech-instant-print-camera"></i><i class="pip" data-pip="study-mechanical-pencils"></i><i class="pip" data-pip="study-highlighters"></i><i class="pip" data-pip="study-sticky-tabs"></i><i class="pip" data-pip="study-sticky-notes"></i><i class="pip" data-pip="books-you-revealed"></i><i class="pip" data-pip="books-olam-hamiddos"></i><i class="pip" data-pip="books-olam-haavodah"></i><i class="pip" data-pip="books-mean-what-you-pray"></i><i class="pip" data-pip="books-gates-of-prayer"></i><i class="pip" data-pip="books-chofetz-chaim-a-lesson-a-day"></i><i class="pip" data-pip="books-ka-asher-tziva-hashem"></i><i class="pip" data-pip="books-living-inspired"></i><i class="pip" data-pip="books-reclaiming-dignity"></i><i class="pip" data-pip="books-emunah-in-reality"></i><i class="pip" data-pip="books-attached"></i><i class="pip" data-pip="go-packing-cubes"></i><i class="pip" data-pip="go-carry-on-suitcase"></i><i class="pip" data-pip="go-stick-on-phone-wallet"></i><i class="pip" data-pip="go-toiletry-makeup-bag"></i><i class="pip" data-pip="go-travel-size-mouthwash"></i><i class="pip" data-pip="go-travel-size-shampoo-set"></i><i class="pip" data-pip="go-flashlight"></i><i class="pip" data-pip="go-owala-water-bottle"></i><i class="pip" data-pip="go-stanley-tumbler"></i></div>
 <p class="meter-cap"><b id="capDone">0 packed</b> · <span id="capLeft">72 to go</span></p>
+</div>
 </div>
 </section>
 
@@ -946,7 +962,7 @@ footer .brand{font-size:17px}
 </div>
 <div>
 <p><strong style="color:var(--ink)">Affiliate disclosure</strong><br>This site participates in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by linking to Amazon.com. Clicking a link costs you nothing extra.</p>
-<p style="font-family:'JetBrains Mono',monospace;font-size:12px">&copy; <span id="yr">2026</span> The Seminary List · build v5</p>
+<p style="font-family:'JetBrains Mono',monospace;font-size:12px">&copy; <span id="yr">2026</span> The Seminary List · build v8</p>
 </div>
 </div>
 </footer>
